@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="gu">
 
 <head>
     <meta charSet="utf-8">
@@ -33,13 +33,13 @@
             color-scheme: light dark;
 
             --display: flex;
-            --radius: 30px;
+            --radius: 12px;
             --padding: 20px;
             --font-size: 2em;
             --table-width: 400px;
 
-            --primary: #FF644C;
-            --background: #FAF7F3;
+            --primary: #202040;
+            --background: #e9f0ff;
         }
 
         @media (prefers-color-scheme:dark) {
@@ -75,42 +75,35 @@
             font-size: calc(var(--font-size) + 1em);
         }
 
-        main>article {
+        main>article.header {
             flex-wrap: wrap;
             display: var(--display);
             justify-content: space-evenly;
         }
 
+        main>article.content {
+            flex-wrap: wrap;
+            display: var(--display);
+            justify-content: space-between;
+        }
+
         section {
             margin: var(--padding);
-            border-radius: var(--radius);
             outline: 5px solid var(--primary);
+            border-radius: calc(var(--radius) + 8px);
         }
 
         section>div {
             text-align: center;
             color: whitesmoke;
+            margin: 10px;
             padding: var(--padding);
+            border-radius: var(--radius);
             background-color: var(--primary);
-            border-radius: var(--radius) var(--radius) 0 0;
-        }
-
-        table {
-            padding: var(--padding);
-            min-width: var(--table-width);
-            border-radius: 0 0 var(--radius) var(--radius);
-        }
-
-        table>tr {
-            justify-content: space-between;
-        }
-
-        table>tr>td:nth-child(2) {
-            width: 80px;
         }
 
         footer {
-            font-size: 0.7em;
+            font-size: 0.8em;
             font-weight: bold;
             text-align: center;
         }
@@ -128,10 +121,6 @@
                 --padding: 12px;
                 --font-size: 1.3em;
                 --table-width: 300px;
-            }
-
-            table>tr>td:nth-child(2) {
-                width: 70px;
             }
         }
 
@@ -166,362 +155,83 @@
             <figure>
                 <img id="logo" src="logo.light.webp" type="image/webp" loading="lazy" alt="Dankawala Kathiyawadi Restaurent logo">
             </figure>
-            <h1>ડંકાવાલા કાઠીયાવાડી</h1>
-            <h2>ગાર્ડન રેસ્ટોરન્ટ મેનુ</h2>
+            <h1>ડંકાવાલા કાઠીયાવાડી મેનુ</h2>
         </header>
         <main>
-            <article id="container"></article>
+            <article class="header">
+                <section>
+                    <div>🍲</div>
+                </section>
+                <section>
+                    <div><strong>અનલિમિટેડ ડીશ - ₹૨૦૦/-</strong></div>
+                    <div>ગ્રુપ બૂકિંગ પર ૧૦&percnt; ડિસ્કાઉન્ટ<sup>*</sup></div>
+                </section>
+                <section>
+                    <div>🍲</div>
+                </section>
+            </article>
+            <article class="content">
+                <section>
+                    <div>૧. પાણીપૂરી</div>
+                </section>
+                <section>
+                    <div>૨. સૂપ</div>
+                </section>
+                <section>
+                    <div>૩. છાશ</div>
+                </section>
+                <section>
+                    <div>૪. સલાડ</div>
+                </section>
+                <section>
+                    <div>૫. ફ્રાઇમ્સ</div>
+                </section>
+                <section>
+                    <div>૬. સ્વીટ</div>
+                </section>
+                <section>
+                    <div>૭. ફરસાણ</div>
+                </section>
+                <section>
+                    <div>૮. પંજાબી સબ્જી - (૧)</div>
+                </section>
+                <section>
+                    <div>૯. કાઠિયાવાડી સબ્જી - (૨)</div>
+                </section>
+                <section>
+                    <div>૧૦. સેવ લસણ</div>
+                </section>
+                <section>
+                    <div>૧૧. દહીં ભીંડી</div>
+                </section>
+                <section>
+                    <div>૧૨. પનીર હાંડી</div>
+                </section>
+                <section>
+                    <div>૧૩. રોટલી</div>
+                </section>
+                <section>
+                    <div>૧૪. પૂરી</div>
+                </section>
+                <section>
+                    <div>૧૫. દાલ ફ્રાય</div>
+                </section>
+                <section>
+                    <div>૧૬. જીરા રાઈસ</div>
+                </section>
+                <section>
+                    <div>૧૭. કઢી</div>
+                </section>
+                <section>
+                    <div>૧૮. ખીચડી</div>
+                </section>
+            </article>
         </main>
         <footer>
-            <span>ઓર્ડર અપ્યા પછી 15 - 20 મિનિટ રાહ જોવા વિનંતિ.</span>
-            <p>&copy; 2025, Dankawala. All Rights Reserved.</p>
+            <section>*૧૦% ગ્રુપ ડિસ્કાઉન્ટ મેળવવા માટે ઓછામાં ઓછા ૧૫ લોકો જરૂરી છે.</section>
+            <p>&copy; ૨૦૨૬, ડંકાવાલા. સર્વાધિકાર સુરક્ષિત.</p>
         </footer>
     </article>
 </body>
-
-<script>
-    const MENU = {
-        "sections": [
-            {
-                "name": "ચરોતરનો ચટપટો સ્વાદ",
-                "items": [
-                    {
-                        "name": "રોસ્ટેડ પાપડ",
-                        "price": "15"
-                    },
-                    {
-                        "name": "ફ્રાય પાપડ",
-                        "price": "20"
-                    },
-                    {
-                        "name": "મસાલા પાપડ",
-                        "price": "30"
-                    },
-                    {
-                        "name": "ચીઝ મસાલા પાપડ",
-                        "price": "45"
-                    },
-                    {
-                        "name": "છાસ",
-                        "price": "20"
-                    },
-                    {
-                        "name": "ઘી-ગોળ",
-                        "price": "40"
-                    }
-                ]
-            },
-            {
-                "name": "ખીચડીનો ખજાનો",
-                "items": [
-                    {
-                        "name": "સાદી ખીચડી કઢી",
-                        "price": "70"
-                    },
-                    {
-                        "name": "મસાલા ખીચડી કઢી",
-                        "price": "90"
-                    },
-                    {
-                        "name": "ચીઝ ગાર્લીક ખીચડી",
-                        "price": "80"
-                    },
-                    {
-                        "name": "પ્લેન રાઈસ",
-                        "price": "70"
-                    },
-                    {
-                        "name": "જીરા રાઈસ",
-                        "price": "80"
-                    },
-                    {
-                        "name": "દાલ ફ્રાય",
-                        "price": "70"
-                    },
-                    {
-                        "name": "દાલ ફ્રાય તડકા",
-                        "price": "80"
-                    }
-                ]
-            },
-            {
-                "name": "જૈન વાનગીઓ",
-                "items": [
-                    {
-                        "name": "સેવ ટમેટા",
-                        "price": "75"
-                    },
-                    {
-                        "name": "દહીં તીખારી",
-                        "price": "60"
-                    },
-                    {
-                        "name": "મિક્સ વેજ",
-                        "price": "80"
-                    },
-                    {
-                        "name": "કાજુ કારેલા",
-                        "price": "110"
-                    },
-                    {
-                        "name": "પાપડ કારેલા",
-                        "price": "90"
-                    },
-                    {
-                        "name": "કાજુ મસાલા",
-                        "price": "170"
-                    },
-                    {
-                        "name": "ચીઝ બટર મસાલા",
-                        "price": "170"
-                    },
-                    {
-                        "name": "પનીર લજાવાબ",
-                        "price": "140"
-                    },
-                    {
-                        "name": "પ્લેન ખીચડી",
-                        "price": "40"
-                    },
-                    {
-                        "name": "કઢી",
-                        "price": "30"
-                    }
-                ]
-            },
-            {
-                "name": "રોટલા રોટલી",
-                "items": [
-                    {
-                        "name": "સાદી રોટલી",
-                        "price": "8"
-                    },
-                    {
-                        "name": "બટર રોટલી",
-                        "price": "10"
-                    },
-                    {
-                        "name": "સાદો બાજરી રોટલો",
-                        "price": "25"
-                    },
-                    {
-                        "name": "ઘી બાજરી રોટલો",
-                        "price": "30"
-                    },
-                    {
-                        "name": "સાદો મકાઈ રોટલો",
-                        "price": "25"
-                    },
-                    {
-                        "name": "ઘી મકાઈ રોટલો",
-                        "price": "30"
-                    },
-                    {
-                        "name": "રોટલાનુ ચુરમુ",
-                        "price": "80"
-                    },
-                    {
-                        "name": "વાઘરેલો ડ્રાય રોટલો",
-                        "price": "70"
-                    },
-                    {
-                        "name": "વાઘરેલો ગ્રેવી રોટલો",
-                        "price": "80"
-                    },
-                    {
-                        "name": "પરોઠા",
-                        "price": "20"
-                    },
-                    {
-                        "name": "બટર પરોઠા",
-                        "price": "30"
-                    }
-                ]
-            },
-            {
-                "name": "પંજાબી તડકા",
-                "items": [
-                    {
-                        "name": "સ્પે. દાલ મખાની તડકા",
-                        "price": "110"
-                    },
-                    {
-                        "name": "સ્પે. દાલ મખાની",
-                        "price": "100"
-                    },
-                    {
-                        "name": "પનીર લજાવાબ",
-                        "price": "140"
-                    },
-                    {
-                        "name": "ચીઝ બટર મસાલા",
-                        "price": "170"
-                    },
-                    {
-                        "name": "પાલક પનીર",
-                        "price": "130"
-                    },
-                    {
-                        "name": "ચીઝ પનીર બટર મસાલા",
-                        "price": "160"
-                    },
-                    {
-                        "name": "પનીર તુફાની",
-                        "price": "160"
-                    },
-                    {
-                        "name": "પનીર ટીક્કા મસાલા",
-                        "price": "160"
-                    },
-                    {
-                        "name": "પનીર અંગારા",
-                        "price": "180"
-                    },
-                    {
-                        "name": "પનીર હાંડી",
-                        "price": "170"
-                    },
-                    {
-                        "name": "કાજુ મસાલા",
-                        "price": "170"
-                    },
-                    {
-                        "name": "કાજુ કરી",
-                        "price": "160"
-                    },
-                    {
-                        "name": "ડાંકાવાલા ગ્રીન & રેડ",
-                        "price": "200"
-                    }
-                ]
-            },
-            {
-                "name": "કાઠિયાવાડી કહુંબો",
-                "items": [
-                    {
-                        "name": "ભરેલા રીંગણ",
-                        "price": "80"
-                    },
-                    {
-                        "name": "લસણીયા બટેકા",
-                        "price": "80"
-                    },
-                    {
-                        "name": "સેવ ટમેટા",
-                        "price": "75"
-                    },
-                    {
-                        "name": "મિક્સ વેજ",
-                        "price": "80"
-                    },
-                    {
-                        "name": "દહીં તીખારી",
-                        "price": "60"
-                    },
-                    {
-                        "name": "દેશી ચણામસાલા",
-                        "price": "80"
-                    },
-                    {
-                        "name": "કાજુ ગાંઠિયા",
-                        "price": "120"
-                    },
-                    {
-                        "name": "રીંગણ નુ ભરથુ",
-                        "price": "80"
-                    },
-                    {
-                        "name": "કાજુ કારેલા",
-                        "price": "100"
-                    },
-                    {
-                        "name": "પાપડ કારેલા",
-                        "price": "90"
-                    },
-                    {
-                        "name": "સેવ લસણ",
-                        "price": "80"
-                    },
-                    {
-                        "name": "લસણીયા મગ",
-                        "price": "80"
-                    },
-                    {
-                        "name": "સેવ સીંગ ભજીયા",
-                        "price": "90"
-                    },
-                    {
-                        "name": "કસ્તુરી બુંદી",
-                        "price": "80"
-                    }
-                ]
-            },
-            {
-                "name": "કાઠિયાવાડી કહુંબો (સીઝનલ)",
-                "items": [
-                    {
-                        "name": "તુવેર ઠોઠા",
-                        "price": "90"
-                    },
-                    {
-                        "name": "લીલા ચણા",
-                        "price": "90"
-                    },
-                    {
-                        "name": "લીલી હળદળ",
-                        "price": "150"
-                    },
-                    {
-                        "name": "ગ્રીન સેવ લસણ",
-                        "price": "100"
-                    },
-                    {
-                        "name": "મેથી લસણીયા બટાકા",
-                        "price": "90"
-                    },
-                    {
-                        "name": "મેથી પાપડ",
-                        "price": "90"
-                    },
-                    {
-                        "name": "તુવેર મેથી",
-                        "price": "90"
-                    }
-                ]
-            },
-            {
-                "name": "સ્પેશિયલ",
-                "items": [
-                    {
-                        "name": "ચીઝ મસાલા રોટલો",
-                        "price": "130"
-                    }
-                ]
-            }
-        ]
-    };
-
-    window.onload = (event) => {
-        MENU.sections.forEach((group) => {
-            const groupSection = document.createElement("section");
-            const groupTable = document.createElement("table");
-            const groupName = document.createElement("div");
-            groupName.innerText = group.name;
-            groupSection.appendChild(groupName);
-            groupSection.appendChild(groupTable);
-            container.appendChild(groupSection);
-            group.items.forEach((item) => {
-                const listItem = document.createElement("tr");
-                const itemName = document.createElement("td");
-                itemName.innerText = item.name;
-                const itemPrice = document.createElement("td");
-                itemPrice.innerText = `₹ ${item.price}`;
-                listItem.appendChild(itemName);
-                listItem.appendChild(itemPrice);
-                groupTable.appendChild(listItem);
-            });
-        });
-    };
-</script>
 
 </html>
