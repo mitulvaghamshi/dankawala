@@ -1,6 +1,6 @@
 # Dankawala Garden Restaurent
 
-[![logo](files/logo.webp)][menu]
+[![logo](assets/logo.webp)][menu]
 
 [menu]: https://mitulvaghamshi.github.io/Dankawala/ "Click to view menu."
 
@@ -30,6 +30,7 @@
 | ૧૮. | ખીચડી                 |
 
 ## અનલિમિટેડ ડીશ 🍲
+
 - ગ્રુપ બૂકિંગ પર ૧૦% ડિસ્કાઉન્ટ.
 - *(મિનિમમ ૧૫ વ્યક્તિ)
 

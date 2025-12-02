@@ -1,2 +1,4 @@
+# python3 -m http.server -d pages -b [IP_ADDRESS] 3001
+
 # MacOS
 .DS_Store
