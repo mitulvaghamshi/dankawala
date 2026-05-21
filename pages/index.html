@@ -16,7 +16,7 @@
     <meta property="og:site_name" content="Dankawala Kathiyawadi Garden Restaurant">
     <meta property="og:description" content="Authentic wood-fired Kathiyawadi cuisine & Unlimited Gujarati Thali at ₹200. Open-air garden dining in Nadiad, Gujarat.">
     <meta property="og:url" content="https://mitulvaghamshi.github.io/dankawala/">
-    <meta property="og:image" content="https://mitulvaghamshi.github.io/dankawala/icon.webp">
+    <meta property="og:image" content="https://mitulvaghamshi.github.io/dankawala/img/icon.webp">
     <meta property="og:image:type" content="image/webp">
     <meta property="og:image:width" content="265">
     <meta property="og:image:height" content="265">
@@ -25,18 +25,21 @@
 
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Dankawala">
-    <link rel="apple-touch-icon" type="image/webp" href="icon.webp">
+    <link rel="apple-touch-icon" type="image/webp" href="img/icon.webp">
 
-    <link rel="icon" type="image/webp" href="icon.webp">
-    <link rel="shortcut icon" type="image/webp" href="icon.webp">
+    <link rel="icon" type="image/webp" href="img/icon.webp">
+    <link rel="shortcut icon" type="image/webp" href="img/icon.webp">
 
     <title>Dankawala - Kathiyawadi Garden Restaurant Menu & Info</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Dankawala - Kathiyawadi Garden Restaurant Menu">
     <meta name="twitter:description" content="Authentic Kathiyawadi Garden Restaurant Menu. Unlimited Gujarati Thali at ₹200.">
-    <meta name="twitter:image" content="https://mitulvaghamshi.github.io/dankawala/icon.webp">
+    <meta name="twitter:image" content="https://mitulvaghamshi.github.io/dankawala/img/icon.webp">
 
     <!-- Preconnect & Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,7 +52,7 @@
       "@context": "https://schema.org",
       "@type": "Restaurant",
       "name": "Dankawala Kathiyawadi Garden Restaurant",
-      "image": "https://mitulvaghamshi.github.io/dankawala/icon.webp",
+      "image": "https://mitulvaghamshi.github.io/dankawala/img/icon.webp",
       "url": "https://mitulvaghamshi.github.io/dankawala/",
       "servesCuisine": "Kathiyawadi, Gujarati, Indian",
       "priceRange": "₹200",
@@ -88,1067 +91,13 @@
       }
     }
     </script>
-
-    <style>
-        /* Custom Modern Reset & CSS Variables */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.2s ease, opacity 0.3s ease;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        :root {
-            /* Theme Color Tokens */
-            --terracotta: #e2703a;
-            --terracotta-dark: #b84f1d;
-            --saffron: #ff9f43;
-            --gold: #dfb76c;
-            --gold-glow: rgba(223, 183, 108, 0.2);
-            --black-bg: #14120e;
-            --dark-card: #201b13;
-            --light-bg: #fffbf5;
-            --light-card: #ffffff;
-            --white: #ffffff;
-            --grey-light: #f5efe6;
-            --grey-dark: #322b20;
-            --text-dark: #221c13;
-            --text-light: #f5eedc;
-            --text-muted: #8c8273;
-
-            /* Structural variables */
-            --container-width: 1200px;
-            --font-display: 'Playfair Display', serif;
-            --font-body: 'Plus Jakarta Sans', sans-serif;
-            --font-gujarati-head: 'Noto Serif Gujarati', serif;
-            --font-gujarati-body: 'Noto Sans Gujarati', sans-serif;
-            --shadow-soft: 0 8px 30px rgba(0, 0, 0, 0.08);
-            --shadow-hard: 0 16px 40px rgba(0, 0, 0, 0.2);
-            --border-radius: 16px;
-        }
-
-        /* Light/Dark Classes mapped on html root element */
-        html.theme-light {
-            --bg-primary: var(--light-bg);
-            --bg-secondary: var(--white);
-            --bg-card: var(--light-card);
-            --bg-glass: rgba(255, 255, 255, 0.4);
-            --border-color: rgba(226, 112, 58, 0.15);
-            --text-primary: var(--text-dark);
-            --text-secondary: #4a3e2c;
-            --shadow-color: rgba(184, 79, 29, 0.08);
-            --hero-overlay: rgba(0, 0, 0, 0.65);
-        }
-
-        html.theme-dark {
-            --bg-primary: var(--black-bg);
-            --bg-secondary: #1a1611;
-            --bg-card: var(--dark-card);
-            --bg-glass: rgba(32, 27, 19, 0.4);
-            --border-color: rgba(223, 183, 108, 0.15);
-            --text-primary: var(--text-light);
-            --text-secondary: #d3c4b1;
-            --shadow-color: rgba(0, 0, 0, 0.5);
-            --hero-overlay: rgba(0, 0, 0, 0.75);
-        }
-
-        body {
-            font-family: var(--font-body);
-            background-color: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        body[lang="gu"] {
-            font-family: var(--font-gujarati-body), var(--font-body);
-        }
-
-        /* Top Navigation Header bar */
-        nav.nav-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 80px;
-            background-color: var(--bg-glass);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            z-index: 1000;
-            border-bottom: 1px solid var(--border-color);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 5%;
-            box-shadow: var(--shadow-soft);
-        }
-
-        .nav-logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-        }
-
-        .nav-logo img {
-            height: 48px;
-            width: auto;
-            border-radius: 50%;
-            border: 2px solid var(--terracotta);
-        }
-
-        .nav-logo span {
-            font-family: var(--font-gujarati-head);
-            font-size: 1.4rem;
-            color: var(--terracotta);
-            font-weight: 700;
-        }
-
-        .nav-controls {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        /* Elegant Toggle Switch for Language & Theme */
-        .toggle-btn {
-            background-color: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            color: var(--text-primary);
-            padding: 8px 16px;
-            border-radius: 30px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            box-shadow: var(--shadow-soft);
-        }
-
-        .toggle-btn:hover {
-            border-color: var(--terracotta);
-            color: var(--terracotta);
-            transform: translateY(-2px);
-        }
-
-        .toggle-btn svg {
-            width: 16px;
-            height: 16px;
-            fill: currentColor;
-        }
-
-        /* Language Toggle design */
-        .lang-switch-wrapper {
-            display: flex;
-            align-items: center;
-            background-color: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 30px;
-            padding: 3px;
-        }
-
-        .lang-option {
-            border: none;
-            background: none;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            cursor: pointer;
-            color: var(--text-muted);
-        }
-
-        .lang-option.active {
-            background-color: var(--terracotta);
-            color: var(--white);
-            box-shadow: 0 4px 10px rgba(226, 112, 58, 0.3);
-        }
-
-        /* Hero Banner Section styling */
-        header.hero-section {
-            position: relative;
-            height: 100vh;
-            min-height: 600px;
-            background: url('garden_ambiance.png') no-repeat center center / cover;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 20px;
-            margin-top: 80px;
-        }
-
-        header.hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: var(--hero-overlay);
-            z-index: 1;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 850px;
-            color: var(--white);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .hero-badge {
-            background: rgba(226, 112, 58, 0.2);
-            border: 1px solid var(--terracotta);
-            color: var(--saffron);
-            font-weight: 700;
-            font-size: 0.9rem;
-            letter-spacing: 2px;
-            padding: 8px 20px;
-            border-radius: 30px;
-            text-transform: uppercase;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(226, 112, 58, 0.4);
-            }
-
-            70% {
-                box-shadow: 0 0 0 10px rgba(226, 112, 58, 0);
-            }
-
-            100% {
-                box-shadow: 0 0 0 0 rgba(226, 112, 58, 0);
-            }
-        }
-
-        .hero-logo-img {
-            max-width: 220px;
-            height: auto;
-            margin-bottom: 10px;
-            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
-        }
-
-        .hero-title {
-            font-family: var(--font-gujarati-head), var(--font-display);
-            font-size: 3.5rem;
-            line-height: 1.2;
-            color: var(--gold);
-            font-weight: 800;
-            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
-        }
-
-        .hero-desc {
-            font-size: 1.2rem;
-            color: #ece5d8;
-            max-width: 650px;
-            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
-        }
-
-        .hero-cta {
-            margin-top: 15px;
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .btn-primary {
-            background-color: var(--terracotta);
-            color: var(--white);
-            border: none;
-            padding: 14px 32px;
-            border-radius: 30px;
-            font-size: 1rem;
-            font-weight: 700;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            box-shadow: 0 8px 20px rgba(226, 112, 58, 0.4);
-        }
-
-        .btn-primary:hover {
-            background-color: var(--terracotta-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 12px 24px rgba(226, 112, 58, 0.5);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--white);
-            border: 2px solid var(--white);
-            padding: 12px 30px;
-            border-radius: 30px;
-            font-size: 1rem;
-            font-weight: 700;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--white);
-            color: var(--black-bg);
-            transform: translateY(-3px);
-        }
-
-        /* Container & Grid systems */
-        .container {
-            width: 90%;
-            max-width: var(--container-width);
-            margin: 0 auto;
-            padding: 80px 0;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-title {
-            font-family: var(--font-gujarati-head), var(--font-display);
-            font-size: 2.6rem;
-            color: var(--terracotta);
-            position: relative;
-            display: inline-block;
-            padding-bottom: 15px;
-            font-weight: 800;
-        }
-
-        .section-title::after {
-            content: '🍲';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 1.2rem;
-        }
-
-        .section-desc {
-            color: var(--text-muted);
-            margin-top: 15px;
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Our Story (About) section styling */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .about-text {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .about-text h3 {
-            font-family: var(--font-gujarati-head), var(--font-display);
-            font-size: 1.8rem;
-            color: var(--gold);
-            font-weight: 700;
-        }
-
-        .about-text p {
-            color: var(--text-secondary);
-            font-size: 1.05rem;
-            line-height: 1.7;
-        }
-
-        .about-features {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 10px;
-        }
-
-        .feature-tag {
-            background-color: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--text-primary);
-        }
-
-        .about-image {
-            position: relative;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--shadow-hard);
-            border: 4px solid var(--gold);
-        }
-
-        .about-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        /* Unlimited Thali Feature Card styling */
-        .thali-showcase-section {
-            background-color: var(--bg-secondary);
-            border-top: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
-            position: relative;
-        }
-
-        .thali-container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: linear-gradient(135deg, var(--bg-card) 0%, rgba(226, 112, 58, 0.05) 100%);
-            border: 2px solid var(--gold);
-            border-radius: 24px;
-            padding: 50px 40px;
-            text-align: center;
-            box-shadow: var(--shadow-hard);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .thali-container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 6px;
-            background: linear-gradient(to right, var(--terracotta), var(--saffron), var(--gold));
-        }
-
-        .thali-badge {
-            background-color: var(--gold);
-            color: var(--black-bg);
-            font-weight: 800;
-            font-size: 1.1rem;
-            padding: 10px 24px;
-            border-radius: 30px;
-            display: inline-block;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 15px rgba(223, 183, 108, 0.4);
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .thali-title {
-            font-family: var(--font-gujarati-head), var(--font-display);
-            font-size: 2.8rem;
-            color: var(--terracotta);
-            font-weight: 800;
-            margin-bottom: 15px;
-        }
-
-        .thali-price {
-            font-family: var(--font-gujarati-head), var(--font-display);
-            font-size: 3.5rem;
-            color: var(--gold);
-            font-weight: 800;
-            margin-bottom: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: baseline;
-            gap: 5px;
-        }
-
-        .thali-price span.small {
-            font-size: 1.5rem;
-            color: var(--text-muted);
-            font-weight: 500;
-        }
-
-        .thali-desc {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            max-width: 700px;
-            margin: 0 auto 35px auto;
-            line-height: 1.7;
-        }
-
-        .thali-promo-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-
-        .promo-item {
-            background-color: var(--bg-secondary);
-            border: 1px dashed var(--terracotta);
-            border-radius: var(--border-radius);
-            padding: 20px;
-            text-align: left;
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-        }
-
-        .promo-icon {
-            font-size: 2.2rem;
-        }
-
-        .promo-text h4 {
-            font-family: var(--font-gujarati-head), var(--font-body);
-            color: var(--terracotta);
-            font-size: 1.15rem;
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
-
-        .promo-text p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-
-        .wait-notice {
-            background-color: rgba(223, 183, 108, 0.08);
-            border: 1px solid var(--gold-glow);
-            padding: 12px 24px;
-            border-radius: 30px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: var(--gold);
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        /* Menu filter buttons styling */
-        .menu-filters {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 50px;
-        }
-
-        .filter-btn {
-            background-color: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            color: var(--text-primary);
-            padding: 10px 24px;
-            border-radius: 30px;
-            font-size: 0.95rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .filter-btn.active,
-        .filter-btn:hover {
-            background-color: var(--terracotta);
-            border-color: var(--terracotta);
-            color: var(--white);
-            box-shadow: 0 6px 18px rgba(226, 112, 58, 0.3);
-            transform: translateY(-2px);
-        }
-
-        /* Menu cards grid layout */
-        .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .menu-card {
-            background-color: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--shadow-soft);
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-
-        .menu-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--terracotta);
-            box-shadow: var(--shadow-hard);
-        }
-
-        .menu-card-img {
-            height: 180px;
-            width: 100%;
-            background-color: var(--bg-secondary);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .menu-card-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .menu-card:hover .menu-card-img img {
-            transform: scale(1.1);
-        }
-
-        /* Decorative mandala placeholder for cards without custom images */
-        .mandala-placeholder {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(226, 112, 58, 0.1) 100%);
-            color: rgba(226, 112, 58, 0.25);
-        }
-
-        .mandala-placeholder svg {
-            width: 100px;
-            height: 100px;
-            animation: rotateMandala 20s linear infinite;
-        }
-
-        @keyframes rotateMandala {
-            from {
-                transform: rotate(0deg);
-            }
-
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        .menu-card-badge {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background-color: rgba(20, 18, 14, 0.85);
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-            border: 1px solid var(--gold);
-            color: var(--gold);
-            font-size: 0.75rem;
-            font-weight: 700;
-            padding: 5px 12px;
-            border-radius: 20px;
-            text-transform: uppercase;
-        }
-
-        .menu-card-details {
-            padding: 25px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            flex-grow: 1;
-        }
-
-        .menu-card-num {
-            font-family: var(--font-gujarati-head), var(--font-display);
-            font-size: 0.9rem;
-            color: var(--terracotta);
-            font-weight: 700;
-        }
-
-        .menu-card-title {
-            font-family: var(--font-gujarati-head), var(--font-body);
-            font-size: 1.35rem;
-            color: var(--text-primary);
-            font-weight: 700;
-            margin-top: -5px;
-        }
-
-        .menu-card-eng {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: -8px;
-        }
-
-        .menu-card-desc {
-            font-size: 0.95rem;
-            color: var(--text-secondary);
-            line-height: 1.5;
-        }
-
-        /* Testimonials Section styling */
-        .testimonials-section {
-            background-color: var(--bg-secondary);
-            border-top: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 20px;
-        }
-
-        .review-card {
-            background-color: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: var(--border-radius);
-            padding: 30px;
-            box-shadow: var(--shadow-soft);
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            position: relative;
-        }
-
-        .review-card::before {
-            content: '“';
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            font-size: 5rem;
-            color: rgba(226, 112, 58, 0.15);
-            font-family: serif;
-            line-height: 1;
-        }
-
-        .review-stars {
-            color: var(--saffron);
-            font-size: 1.2rem;
-            display: flex;
-            gap: 3px;
-        }
-
-        .review-text {
-            font-size: 1rem;
-            color: var(--text-secondary);
-            line-height: 1.6;
-            font-style: italic;
-            flex-grow: 1;
-        }
-
-        .review-author {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            border-top: 1px solid var(--border-color);
-            padding-top: 15px;
-        }
-
-        .author-avatar {
-            width: 45px;
-            height: 45px;
-            background-color: var(--terracotta);
-            color: var(--white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 1.1rem;
-            box-shadow: 0 4px 10px rgba(226, 112, 58, 0.2);
-        }
-
-        .author-info h4 {
-            font-size: 0.95rem;
-            font-weight: 700;
-            color: var(--text-primary);
-        }
-
-        .author-info span {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-        }
-
-        /* Timing, Location, Map & Footer styling */
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            gap: 60px;
-            margin-bottom: 60px;
-            align-items: stretch;
-        }
-
-        .contact-info-panel {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-
-        .info-card {
-            background-color: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: var(--border-radius);
-            padding: 30px;
-            box-shadow: var(--shadow-soft);
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .info-row {
-            display: flex;
-            align-items: flex-start;
-            gap: 20px;
-        }
-
-        .info-icon {
-            background-color: rgba(226, 112, 58, 0.1);
-            color: var(--terracotta);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .info-icon svg {
-            width: 24px;
-            height: 24px;
-            fill: currentColor;
-        }
-
-        .info-content h4 {
-            font-family: var(--font-gujarati-head), var(--font-body);
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--terracotta);
-            margin-bottom: 5px;
-        }
-
-        .info-content p {
-            color: var(--text-secondary);
-            font-size: 1.05rem;
-        }
-
-        .map-card {
-            background-color: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: var(--border-radius);
-            padding: 10px;
-            box-shadow: var(--shadow-soft);
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            min-height: 350px;
-        }
-
-        .map-card iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            border-radius: calc(var(--border-radius) - 6px);
-            flex-grow: 1;
-        }
-
-        footer.site-footer {
-            border-top: 1px solid var(--border-color);
-            background-color: var(--bg-secondary);
-            padding: 40px 0;
-            text-align: center;
-        }
-
-        .footer-logo {
-            max-width: 80px;
-            height: auto;
-            margin-bottom: 15px;
-            border-radius: 50%;
-            border: 2px solid var(--gold);
-        }
-
-        .footer-copyright {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            margin-bottom: 10px;
-        }
-
-        .footer-disclaimer {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
-        .footer-disclaimer span {
-            color: var(--terracotta);
-            font-weight: 600;
-        }
-
-        /* Back to top button */
-        .back-to-top {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: var(--terracotta);
-            color: var(--white);
-            border: none;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            z-index: 99;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(10px);
-            transition: all 0.3s ease;
-        }
-
-        .back-to-top.show {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        .back-to-top:hover {
-            background-color: var(--terracotta-dark);
-            transform: scale(1.1);
-        }
-
-        .back-to-top svg {
-            width: 20px;
-            height: 20px;
-            fill: currentColor;
-        }
-
-        /* Responsive Breakpoints & Overrides */
-        @media (max-width: 992px) {
-            .about-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .about-image {
-                order: -1;
-                max-height: 450px;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .hero-title {
-                font-size: 2.8rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .thali-container {
-                padding: 30px 20px;
-            }
-
-            .thali-title {
-                font-size: 2.2rem;
-            }
-
-            .thali-price {
-                font-size: 2.8rem;
-            }
-
-            .thali-promo-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            nav.nav-bar {
-                padding: 0 20px;
-            }
-
-            .nav-logo span {
-                display: none;
-            }
-
-            header.hero-section {
-                height: auto;
-                padding: 120px 20px 80px 20px;
-            }
-
-            .hero-title {
-                font-size: 2.2rem;
-            }
-
-            .hero-desc {
-                font-size: 1rem;
-            }
-
-            .hero-cta {
-                flex-direction: column;
-                width: 100%;
-                max-width: 320px;
-            }
-
-            .btn-primary,
-            .btn-secondary {
-                width: 100%;
-                justify-content: center;
-            }
-        }
-
-        /* Custom scrollbar for premium touch */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--bg-secondary);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--terracotta);
-            border-radius: 5px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--terracotta-dark);
-        }
-
-        /* Animations for filtering */
-        .fade-in-card {
-            animation: fadeInCard 0.4s ease forwards;
-        }
-
-        @keyframes fadeInCard {
-            from {
-                opacity: 0;
-                transform: translateY(15px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
 </head>
 
 <body>
     <!-- Top Navigation -->
     <nav class="nav-bar">
         <a href="#" class="nav-logo" id="nav-logo-link">
-            <img src="icon.webp" alt="Dankawala Logo">
+            <img src="img/icon.webp" alt="Dankawala Logo">
             <span id="nav-logo-text">ડંકાવાલા કાઠિયાવાડી</span>
         </a>
         <div class="nav-controls">
@@ -1175,7 +124,7 @@
     <header class="hero-section" id="home">
         <div class="hero-content">
             <span class="hero-badge" id="hero-badge-text">શુદ્ધ કાઠિયાવાડી સ્વાદ</span>
-            <img class="hero-logo-img" src="logo.dark.webp" alt="Dankawala Gold Logo" id="hero-logo">
+            <img class="hero-logo-img" src="img/logo.dark.webp" alt="Dankawala Gold Logo" id="hero-logo">
             <h1 class="hero-title" id="hero-main-title">ડંકાવાલા કાઠિયાવાડી ગાર્ડન રેસ્ટોરન્ટ</h1>
             <p class="hero-desc" id="hero-main-desc">નડિયાદમાં ખુલ્લા ગાર્ડન વાતાવરણમાં પરંપરાગત લાકડાના ચૂલા પર બનાવેલી અસલ કાઠિયાવાડી વાનગીઓનો લહાવો લો.</p>
             <div class="hero-cta">
@@ -1204,10 +153,11 @@
                     <div class="feature-tag">🔥 <span id="feat-2">ચૂલા પર બનાવેલ ભોજન</span></div>
                     <div class="feature-tag">👪 <span id="feat-3">ફેમિલી ફ્રેન્ડલી સ્પેસ</span></div>
                     <div class="feature-tag">🚗 <span id="feat-4">મોટો પાર્કિંગ એરિયા</span></div>
+                    <div class="feature-tag">📸 <span id="feat-5">માસ્કોટ સાથે ફોટો પાડવાનું સ્થળ</span></div>
                 </div>
             </div>
             <div class="about-image">
-                <img src="kathiyawadi_thali.png" alt="Steaming Kathiyawadi Thali at Dankawala">
+                <img src="img/intro_thali.opt.webp" alt="Steaming Kathiyawadi Thali at Dankawala">
             </div>
         </div>
     </section>
@@ -1271,11 +221,7 @@
             <!-- Item 1: Panipuri -->
             <div class="menu-card fade-in-card" data-category="starters">
                 <div class="menu-card-img">
-                    <div class="mandala-placeholder">
-                        <svg viewBox="0 0 100 100">
-                            <path fill="currentColor" d="M50 15c-19.3 0-35 15.7-35 35s15.7 35 35 35 35-15.7 35-35-15.7-35-35-35zm0 6c16 0 29 13 29 29s-13 29-29 29-29-13-29-29 13-29 29-29zm0 8c-11.6 0-21 9.4-21 21s9.4 21 21 21 21-9.4 21-21-9.4-21-21-21zm0 6c8.3 0 15 6.7 15 15s-6.7 15-15 15-15-6.7-15-15 6.7-15 15-15z" />
-                        </svg>
-                    </div>
+                    <img src="items/1.panipuri.opt.webp" alt="Spicy Sev Lasan Curry">
                     <span class="menu-card-badge" id="badge-item-1">Unlimited</span>
                 </div>
                 <div class="menu-card-details">
@@ -1289,11 +235,7 @@
             <!-- Item 2: Soup -->
             <div class="menu-card fade-in-card" data-category="starters">
                 <div class="menu-card-img">
-                    <div class="mandala-placeholder">
-                        <svg viewBox="0 0 100 100">
-                            <path fill="currentColor" d="M50 15c-19.3 0-35 15.7-35 35s15.7 35 35 35 35-15.7 35-35-15.7-35-35-35zm0 6c16 0 29 13 29 29s-13 29-29 29-29-13-29-29 13-29 29-29zm0 8c-11.6 0-21 9.4-21 21s9.4 21 21 21 21-9.4 21-21-9.4-21-21-21zm0 6c8.3 0 15 6.7 15 15s-6.7 15-15 15-15-6.7-15-15 6.7-15 15-15z" />
-                        </svg>
-                    </div>
+                    <img src="items/2.soup.opt.webp" alt="Spicy Sev Lasan Curry">
                     <span class="menu-card-badge" id="badge-item-2">Unlimited</span>
                 </div>
                 <div class="menu-card-details">
@@ -1307,11 +249,7 @@
             <!-- Item 3: Chaas -->
             <div class="menu-card fade-in-card" data-category="sweets-drinks">
                 <div class="menu-card-img">
-                    <div class="mandala-placeholder">
-                        <svg viewBox="0 0 100 100">
-                            <path fill="currentColor" d="M50 15c-19.3 0-35 15.7-35 35s15.7 35 35 35 35-15.7 35-35-15.7-35-35-35zm0 6c16 0 29 13 29 29s-13 29-29 29-29-13-29-29 13-29 29-29zm0 8c-11.6 0-21 9.4-21 21s9.4 21 21 21 21-9.4 21-21-9.4-21-21-21zm0 6c8.3 0 15 6.7 15 15s-6.7 15-15 15-15-6.7-15-15 6.7-15 15-15z" />
-                        </svg>
-                    </div>
+                    <img src="items/3.chaas.opt.webp" alt="Spicy Sev Lasan Curry">
                     <span class="menu-card-badge" id="badge-item-3">Unlimited</span>
                 </div>
                 <div class="menu-card-details">
@@ -1325,11 +263,7 @@
             <!-- Item 4: Salad -->
             <div class="menu-card fade-in-card" data-category="starters">
                 <div class="menu-card-img">
-                    <div class="mandala-placeholder">
-                        <svg viewBox="0 0 100 100">
-                            <path fill="currentColor" d="M50 15c-19.3 0-35 15.7-35 35s15.7 35 35 35 35-15.7 35-35-15.7-35-35-35zm0 6c16 0 29 13 29 29s-13 29-29 29-29-13-29-29 13-29 29-29zm0 8c-11.6 0-21 9.4-21 21s9.4 21 21 21 21-9.4 21-21-9.4-21-21-21zm0 6c8.3 0 15 6.7 15 15s-6.7 15-15 15-15-6.7-15-15 6.7-15 15-15z" />
-                        </svg>
-                    </div>
+                    <img src="items/4.salad.opt.webp" alt="Spicy Sev Lasan Curry">
                     <span class="menu-card-badge" id="badge-item-4">Unlimited</span>
                 </div>
                 <div class="menu-card-details">
@@ -1343,11 +277,7 @@
             <!-- Item 5: Fryms -->
             <div class="menu-card fade-in-card" data-category="starters">
                 <div class="menu-card-img">
-                    <div class="mandala-placeholder">
-                        <svg viewBox="0 0 100 100">
-                            <path fill="currentColor" d="M50 15c-19.3 0-35 15.7-35 35s15.7 35 35 35 35-15.7 35-35-15.7-35-35-35zm0 6c16 0 29 13 29 29s-13 29-29 29-29-13-29-29 13-29 29-29zm0 8c-11.6 0-21 9.4-21 21s9.4 21 21 21 21-9.4 21-21-9.4-21-21-21zm0 6c8.3 0 15 6.7 15 15s-6.7 15-15 15-15-6.7-15-15 6.7-15 15-15z" />
-                        </svg>
-                    </div>
+                    <img src="items/5.fraims.opt.webp" alt="Spicy Sev Lasan Curry">
                     <span class="menu-card-badge" id="badge-item-5">Unlimited</span>
                 </div>
                 <div class="menu-card-details">
@@ -1361,11 +291,7 @@
             <!-- Item 6: Sweet -->
             <div class="menu-card fade-in-card" data-category="sweets-drinks">
                 <div class="menu-card-img">
-                    <div class="mandala-placeholder">
-                        <svg viewBox="0 0 100 100">
-                            <path fill="currentColor" d="M50 15c-19.3 0-35 15.7-35 35s15.7 35 35 35 35-15.7 35-35-15.7-35-35-35zm0 6c16 0 29 13 29 29s-13 29-29 29-29-13-29-29 13-29 29-29zm0 8c-11.6 0-21 9.4-21 21s9.4 21 21 21 21-9.4 21-21-9.4-21-21-21zm0 6c8.3 0 15 6.7 15 15s-6.7 15-15 15-15-6.7-15-15 6.7-15 15-15z" />
-                        </svg>
-                    </div>
+                    <img src="items/6.sweet.opt.webp" alt="Spicy Sev Lasan Curry">
                     <span class="menu-card-badge" id="badge-item-6">Unlimited</span>
                 </div>
                 <div class="menu-card-details">
@@ -1379,11 +305,7 @@
             <!-- Item 7: Farsan -->
             <div class="menu-card fade-in-card" data-category="starters">
                 <div class="menu-card-img">
-                    <div class="mandala-placeholder">
-                        <svg viewBox="0 0 100 100">
-                            <path fill="currentColor" d="M50 15c-19.3 0-35 15.7-35 35s15.7 35 35 35 35-15.7 35-35-15.7-35-35-35zm0 6c16 0 29 13 29 29s-13 29-29 29-29-13-29-29 13-29 29-29zm0 8c-11.6 0-21 9.4-21 21s9.4 21 21 21 21-9.4 21-21-9.4-21-21-21zm0 6c8.3 0 15 6.7 15 15s-6.7 15-15 15-15-6.7-15-15 6.7-15 15-15z" />
-                        </svg>
-                    </div>
+                    <img src="items/7.farsan.opt.webp" alt="Spicy Sev Lasan Curry">
                     <span class="menu-card-badge" id="badge-item-7">Unlimited</span>
                 </div>
                 <div class="menu-card-details">
@@ -1397,11 +319,7 @@
             <!-- Item 8: Punjabi Subji 1 -->
             <div class="menu-card fade-in-card" data-category="curries">
                 <div class="menu-card-img">
-                    <div class="mandala-placeholder">
-                        <svg viewBox="0 0 100 100">
-                            <path fill="currentColor" d="M50 15c-19.3 0-35 15.7-35 35s15.7 35 35 35 35-15.7 35-35-15.7-35-35-35zm0 6c16 0 29 13 29 29s-13 29-29 29-29-13-29-29 13-29 29-29zm0 8c-11.6 0-21 9.4-21 21s9.4 21 21 21 21-9.4 21-21-9.4-21-21-21zm0 6c8.3 0 15 6.7 15 15s-6.7 15-15 15-15-6.7-15-15 6.7-15 15-15z" />
-                        </svg>
-                    </div>
+                    <img src="items/8.punjabi.opt.webp" alt="Spicy Sev Lasan Curry">
                     <span class="menu-card-badge" id="badge-item-8">Unlimited</span>
                 </div>
                 <div class="menu-card-details">
@@ -1415,11 +333,7 @@
             <!-- Item 9: Kathiyawadi Subji 2 -->
             <div class="menu-card fade-in-card" data-category="curries">
                 <div class="menu-card-img">
-                    <div class="mandala-placeholder">
-                        <svg viewBox="0 0 100 100">
-                            <path fill="currentColor" d="M50 15c-19.3 0-35 15.7-35 35s15.7 35 35 35 35-15.7 35-35-15.7-35-35-35zm0 6c16 0 29 13 29 29s-13 29-29 29-29-13-29-29 13-29 29-29zm0 8c-11.6 0-21 9.4-21 21s9.4 21 21 21 21-9.4 21-21-9.4-21-21-21zm0 6c8.3 0 15 6.7 15 15s-6.7 15-15 15-15-6.7-15-15 6.7-15 15-15z" />
-                        </svg>
-                    </div>
+                    <img src="items/9.kathiyawadi.opt.webp" alt="Spicy Sev Lasan Curry">
                     <span class="menu-card-badge" id="badge-item-9">Unlimited</span>
                 </div>
                 <div class="menu-card-details">
@@ -1433,7 +347,7 @@
             <!-- Item 10: Sev Lasan -->
             <div class="menu-card fade-in-card" data-category="curries">
                 <div class="menu-card-img">
-                    <img src="sev_lasan.png" alt="Spicy Sev Lasan Curry">
+                    <img src="items/10.sevlasan.opt.webp" alt="Spicy Sev Lasan Curry">
                     <span class="menu-card-badge" id="badge-item-10">Signature</span>
                 </div>
                 <div class="menu-card-details">
@@ -1447,11 +361,7 @@
             <!-- Item 11: Dahi Bhindi -->
             <div class="menu-card fade-in-card" data-category="curries">
                 <div class="menu-card-img">
-                    <div class="mandala-placeholder">
-                        <svg viewBox="0 0 100 100">
-                            <path fill="currentColor" d="M50 15c-19.3 0-35 15.7-35 35s15.7 35 35 35 35-15.7 35-35-15.7-35-35-35zm0 6c16 0 29 13 29 29s-13 29-29 29-29-13-29-29 13-29 29-29zm0 8c-11.6 0-21 9.4-21 21s9.4 21 21 21 21-9.4 21-21-9.4-21-21-21zm0 6c8.3 0 15 6.7 15 15s-6.7 15-15 15-15-6.7-15-15 6.7-15 15-15z" />
-                        </svg>
-                    </div>
+                    <img src="items/11.dahibhindi.opt.webp" alt="Spicy Sev Lasan Curry">
                     <span class="menu-card-badge" id="badge-item-11">Unlimited</span>
                 </div>
                 <div class="menu-card-details">
@@ -1465,11 +375,7 @@
             <!-- Item 12: Paneer Handi -->
             <div class="menu-card fade-in-card" data-category="curries">
                 <div class="menu-card-img">
-                    <div class="mandala-placeholder">
-                        <svg viewBox="0 0 100 100">
-                            <path fill="currentColor" d="M50 15c-19.3 0-35 15.7-35 35s15.7 35 35 35 35-15.7 35-35-15.7-35-35-35zm0 6c16 0 29 13 29 29s-13 29-29 29-29-13-29-29 13-29 29-29zm0 8c-11.6 0-21 9.4-21 21s9.4 21 21 21 21-9.4 21-21-9.4-21-21-21zm0 6c8.3 0 15 6.7 15 15s-6.7 15-15 15-15-6.7-15-15 6.7-15 15-15z" />
-                        </svg>
-                    </div>
+                    <img src="items/12.panirhandi.opt.webp" alt="Spicy Sev Lasan Curry">
                     <span class="menu-card-badge" id="badge-item-12">Unlimited</span>
                 </div>
                 <div class="menu-card-details">
@@ -1483,11 +389,7 @@
             <!-- Item 13: Rotli -->
             <div class="menu-card fade-in-card" data-category="breads">
                 <div class="menu-card-img">
-                    <div class="mandala-placeholder">
-                        <svg viewBox="0 0 100 100">
-                            <path fill="currentColor" d="M50 15c-19.3 0-35 15.7-35 35s15.7 35 35 35 35-15.7 35-35-15.7-35-35-35zm0 6c16 0 29 13 29 29s-13 29-29 29-29-13-29-29 13-29 29-29zm0 8c-11.6 0-21 9.4-21 21s9.4 21 21 21 21-9.4 21-21-9.4-21-21-21zm0 6c8.3 0 15 6.7 15 15s-6.7 15-15 15-15-6.7-15-15 6.7-15 15-15z" />
-                        </svg>
-                    </div>
+                    <img src="items/13.rotla.opt.webp" alt="Spicy Sev Lasan Curry">
                     <span class="menu-card-badge" id="badge-item-13">Unlimited</span>
                 </div>
                 <div class="menu-card-details">
@@ -1501,11 +403,7 @@
             <!-- Item 14: Puri -->
             <div class="menu-card fade-in-card" data-category="breads">
                 <div class="menu-card-img">
-                    <div class="mandala-placeholder">
-                        <svg viewBox="0 0 100 100">
-                            <path fill="currentColor" d="M50 15c-19.3 0-35 15.7-35 35s15.7 35 35 35 35-15.7 35-35-15.7-35-35-35zm0 6c16 0 29 13 29 29s-13 29-29 29-29-13-29-29 13-29 29-29zm0 8c-11.6 0-21 9.4-21 21s9.4 21 21 21 21-9.4 21-21-9.4-21-21-21zm0 6c8.3 0 15 6.7 15 15s-6.7 15-15 15-15-6.7-15-15 6.7-15 15-15z" />
-                        </svg>
-                    </div>
+                    <img src="items/14.puri.opt.webp" alt="Spicy Sev Lasan Curry">
                     <span class="menu-card-badge" id="badge-item-14">Unlimited</span>
                 </div>
                 <div class="menu-card-details">
@@ -1519,11 +417,7 @@
             <!-- Item 15: Dal Fry -->
             <div class="menu-card fade-in-card" data-category="sides">
                 <div class="menu-card-img">
-                    <div class="mandala-placeholder">
-                        <svg viewBox="0 0 100 100">
-                            <path fill="currentColor" d="M50 15c-19.3 0-35 15.7-35 35s15.7 35 35 35 35-15.7 35-35-15.7-35-35-35zm0 6c16 0 29 13 29 29s-13 29-29 29-29-13-29-29 13-29 29-29zm0 8c-11.6 0-21 9.4-21 21s9.4 21 21 21 21-9.4 21-21-9.4-21-21-21zm0 6c8.3 0 15 6.7 15 15s-6.7 15-15 15-15-6.7-15-15 6.7-15 15-15z" />
-                        </svg>
-                    </div>
+                    <img src="items/15.dalfry.opt.webp" alt="Spicy Sev Lasan Curry">
                     <span class="menu-card-badge" id="badge-item-15">Unlimited</span>
                 </div>
                 <div class="menu-card-details">
@@ -1537,11 +431,7 @@
             <!-- Item 16: Jeera Rice -->
             <div class="menu-card fade-in-card" data-category="sides">
                 <div class="menu-card-img">
-                    <div class="mandala-placeholder">
-                        <svg viewBox="0 0 100 100">
-                            <path fill="currentColor" d="M50 15c-19.3 0-35 15.7-35 35s15.7 35 35 35 35-15.7 35-35-15.7-35-35-35zm0 6c16 0 29 13 29 29s-13 29-29 29-29-13-29-29 13-29 29-29zm0 8c-11.6 0-21 9.4-21 21s9.4 21 21 21 21-9.4 21-21-9.4-21-21-21zm0 6c8.3 0 15 6.7 15 15s-6.7 15-15 15-15-6.7-15-15 6.7-15 15-15z" />
-                        </svg>
-                    </div>
+                    <img src="items/16.jirarice.opt.webp" alt="Spicy Sev Lasan Curry">
                     <span class="menu-card-badge" id="badge-item-16">Unlimited</span>
                 </div>
                 <div class="menu-card-details">
@@ -1555,11 +445,7 @@
             <!-- Item 17: Kadhi -->
             <div class="menu-card fade-in-card" data-category="sides">
                 <div class="menu-card-img">
-                    <div class="mandala-placeholder">
-                        <svg viewBox="0 0 100 100">
-                            <path fill="currentColor" d="M50 15c-19.3 0-35 15.7-35 35s15.7 35 35 35 35-15.7 35-35-15.7-35-35-35zm0 6c16 0 29 13 29 29s-13 29-29 29-29-13-29-29 13-29 29-29zm0 8c-11.6 0-21 9.4-21 21s9.4 21 21 21 21-9.4 21-21-9.4-21-21-21zm0 6c8.3 0 15 6.7 15 15s-6.7 15-15 15-15-6.7-15-15 6.7-15 15-15z" />
-                        </svg>
-                    </div>
+                    <img src="items/17.kadhi.opt.webp" alt="Spicy Sev Lasan Curry">
                     <span class="menu-card-badge" id="badge-item-17">Unlimited</span>
                 </div>
                 <div class="menu-card-details">
@@ -1573,11 +459,7 @@
             <!-- Item 18: Khichdi -->
             <div class="menu-card fade-in-card" data-category="sides">
                 <div class="menu-card-img">
-                    <div class="mandala-placeholder">
-                        <svg viewBox="0 0 100 100">
-                            <path fill="currentColor" d="M50 15c-19.3 0-35 15.7-35 35s15.7 35 35 35 35-15.7 35-35-15.7-35-35-35zm0 6c16 0 29 13 29 29s-13 29-29 29-29-13-29-29 13-29 29-29zm0 8c-11.6 0-21 9.4-21 21s9.4 21 21 21 21-9.4 21-21-9.4-21-21-21zm0 6c8.3 0 15 6.7 15 15s-6.7 15-15 15-15-6.7-15-15 6.7-15 15-15z" />
-                        </svg>
-                    </div>
+                    <img src="items/18.khichdi.opt.webp" alt="Spicy Sev Lasan Curry">
                     <span class="menu-card-badge" id="badge-item-18">Unlimited</span>
                 </div>
                 <div class="menu-card-details">
@@ -1689,7 +571,7 @@
                         </div>
                         <div class="info-content">
                             <h4 id="info-addr-title">અમારું સરનામું</h4>
-                            <p id="info-addr-desc">ચોકડી, આણંદ હાઇવે, ભુવનેશ્વર મહાદેવની બાજુમાં, પીપલજ, નડિયાદ, ગુજરાત - ૩૮૭૦૦૨</p>
+                            <p id="info-addr-desc">પીપલગ ચોકડી, આણંદ હાઇવે, ભુવનેશ્વર મહાદેવની બાજુમાં, પીપલગ, નડિયાદ, ગુજરાત - ૩૮૭૦૦૨</p>
                         </div>
                     </div>
                 </div>
@@ -1697,7 +579,7 @@
 
             <!-- Map Card linking to Nadiad/Piplag coordinates -->
             <div class="map-card">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m13!1m4!1s0x395e4ffa89ebfdb1:0xc8fbfba894a4c6a9!8m2!3d22.6685!4d72.8872!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDQwJzA2LjYiTiA3MsKwNTMnMTMuOSJF!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="Dankawala Kathiyawadi Garden Restaurant Map"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3681.7887267688684!2d72.8663502!3d22.661664500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e5b21de498091%3A0xe7d7c1617cb1e956!2sDankawala%20Kathiyawadi%20Restaurant!5e0!3m2!1sen!2sin!4v1779366872127!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="Dankawala Kathiyawadi Garden Restaurant Map"></iframe>
             </div>
         </div>
     </section>
@@ -1705,7 +587,7 @@
     <!-- Footer Area -->
     <footer class="site-footer">
         <div class="container" style="padding: 0 0 20px 0;">
-            <img class="footer-logo" src="icon.webp" alt="Dankawala footer logo">
+            <img class="footer-logo" src="img/icon.webp" alt="Dankawala footer logo">
             <p class="footer-copyright" id="footer-copy-text">&copy; ૨૦૨૬, ડંકાવાલા કાઠિયાવાડી ગાર્ડન રેસ્ટોરન્ટ. સર્વાધિકાર સુરક્ષિત.</p>
             <p class="footer-disclaimer" id="footer-disc-text">*ગ્રુપ ડિસ્કાઉન્ટ મેળવવા માટે ઓછામાં ઓછા <span>૧૫ વ્યક્તિઓ</span> નું બુકિંગ ફરજિયાત છે.</p>
         </div>
@@ -1719,437 +601,7 @@
     </button>
 
     <!-- Vanilla Javascript Logic for bilingual toggles, theme switching and filtration -->
-    <script>
-        // Language content map for translating website between English & Gujarati dynamically
-        const langData = {
-            "gu": {
-                "title": "ડંકાવાલા - કાઠિયાવાડી ગાર્ડન રેસ્ટોરન્ટ મેનુ",
-                "nav-text": "ડંકાવાલા કાઠિયાવાડી",
-                "theme-dark": "શ્યામ મોડ",
-                "theme-light": "પ્રકાશ મોડ",
-                "hero-badge": "શુદ્ધ કાઠિયાવાડી સ્વાદ",
-                "hero-title": "ડંકાવાલા કાઠિયાવાડી ગાર્ડન રેસ્ટોરન્ટ",
-                "hero-desc": "નડિયાદમાં ખુલ્લા ગાર્ડન વાતાવરણમાં પરંપરાગત લાકડાના ચૂલા પર બનાવેલી અસલ કાઠિયાવાડી વાનગીઓનો લહાવો લો.",
-                "hero-menu": "เมનુ જુઓ",
-                "hero-contact": "સંપર્ક કરો",
-                //
-                "story-sub": "મીઠો આવકારો",
-                "story-title": "અમારો પરિચય",
-                "story-subtitle": "નડિયાદમાં અસલ ગાર્ડન ડાઇનિંગનો અનુભવ",
-                "story-p1": "નડિયાદ-આણંદ હાઇવે પર પીપલજ ચોકડી પાસે, ભુવનેશ્વર મહાદેવ મંદિરની બાજુમાં આવેલી <strong>ડંકાવાલા કાઠિયાવાડી ગાર્ડન રેસ્ટોરન્ટ</strong> તેના સ્વાદિષ્ટ અને પરંપરાગત ભોજન માટે પ્રખ્યાત છે. અમે વર્ષોથી અસલ લાકડાના ચૂલા પર ધીમી આંચે રાંધવામાં આવતી ગુણવત્તાસભર વાનગીઓ પીરસીએ છીએ.",
-                "story-p2": "અમારી ગાર્ડન રેસ્ટોરન્ટનું મોકળું અને શાંત વાતાવરણ પરિવાર અને મિત્રો સાથે હળવાશની પળો વિતાવવા તેમજ યાદગાર ભોજન માણવા માટે ઉત્તમ છે. ગરમાગરમ રોટલા, તીખા-ચટાકેદાર શાક અને પ્રેમભરી ગુજરાતી મહેમાનગતિ એ અમારી ઓળખ છે.",
-                //
-                "feat1": "મોકળું ગાર્ડન વાતાવરણ",
-                "feat2": "ચૂલા પર બનાવેલ ભોજન",
-                "feat3": "ફેમિલી ફ્રેન્ડલી સ્પેસ",
-                "feat4": "મોટો પાર્કિંગ એરિયા",
-                //
-                "thali-badge": "અમારો ખાસ ધમાકો",
-                "thali-title": "અનલિમિટેડ ગુજરાતી અને કાઠિયાવાડી થાળી",
-                "thali-currency": "₹",
-                "thali-per-person": "/ વ્યક્તિ",
-                "thali-desc": "અમારી અસલ કાઠિયાવાડી થાળીમાં ૧૮ થી પણ વધુ સ્વાદિષ્ટ વાનગીઓનો સમાવેશ થાય છે. ગરમ-ગરમ રોટલી, પૂરી, સેવ લસણ, કઢી-ખીચડી અને અસંખ્ય refills સાથે પેટ ભરીને તૃપ્તિનો અહેસાસ કરો.",
-                "promo1-title": "ગ્રુપ બુકિંગ પર ૧૦% ડિસ્કાઉન્ટ",
-                "promo1-desc": "ઓછામાં ઓછા ૧૫ અથવા વધુ વ્યક્તિઓના ગ્રુપ બુકિંગ પર મેળવો ફ્લેટ ૧૦% નું ખાસ વળતર.",
-                "promo2-title": "બાળકો માટે ખાસ સવલત",
-                "promo2-desc": "પરીવાર સાથે આવતા નાના બાળકો માટે ભોજનમાં વિશેષ કાળજી અને ડિસ્કાઉન્ટની વ્યવસ્થા.",
-                "thali-wait": "આનંદદાયક અને ફ્રેશ ભોજન માટે ઓર્ડર આપ્યા પછી ૧૫ - ૨૦ મિનિટ રાહ જોવા વિનંતિ.",
-                //
-                "menu-title": "શાહી કાઠિયાવાડી મેનુ",
-                "menu-desc": "અનલિમિટેડ થાળીમાં પીરસવામાં આવતી તમામ ૧૮ સ્વાદિષ્ટ વાનગીઓ અને આઇટમ્સની યાદી.",
-                //
-                "filter-all": "બધું જ (All)",
-                "filter-starters": "શરૂઆત અને ફરસાણ (Starters)",
-                "filter-curries": "શાક વાનગીઓ (Curries)",
-                "filter-breads": "રોટલી અને પૂરી (Breads)",
-                "filter-sides": "દાળ, ભાત અને ખીચડી (Rice & Sides)",
-                "filter-drinks": "મીઠાઈ અને પીણાં (Sweets & Drinks)",
-                //
-                "testi-title": "મહેમાનોના પ્રતિભાવો",
-                "testi-desc": "અમારી ગાર્ડન રેસ્ટોરન્ટમાં અદભુત અનુભવ મેળવનાર ગ્રાહકોના સાચા ગૂગલ રીવ્યુ.",
-                //
-                "contact-title": "અમારો સંપર્ક અને સરનામું",
-                "contact-desc": "અમારી ગાર્ડન રેસ્ટોરન્ટમાં રૂબરૂ પધારવા અથવા બુકિંગ માટેની સંપર્ક વિગતો.",
-                //
-                "info-time-title": "ખુલ્લી રહેવાનો સમય",
-                "info-time-desc": "દરરોજ: સવારે ૭:૦૦ થી રાત્રે ૧૧:૦૦ વાગ્યા સુધી",
-                "info-call-title": "ટેબલ બુકિંગ અથવા ઓર્ડર ફોન",
-                "info-call-btn": "કોલ કરો (Call Now)",
-                "info-addr-title": "અમારું સરનામું",
-                "info-addr-desc": "ચોકડી, આણંદ હાઇવે, ભુવનેશ્વર મહાદેવની બાજુમાં, પીપલજ, નડિયાદ, ગુજરાત - ૩૮૭૦૦૨",
-                //
-                "footer-copy": "&copy; ૨૦૨૬, ડંકાવાલા કાઠિયાવાડી ગાર્ડન રેસ્ટોરન્ટ. સર્વાધિકાર સુરક્ષિત.",
-                "footer-disc": "*ગ્રુપ ડિસ્કાઉન્ટ મેળવવા માટે ઓછામાં ઓછા <span>૧૫ વ્યક્તિઓ</span> નું બુકિંગ ફરજિયાત છે.",
-                //
-                // Item details translation in Gujarati
-                "titles": {
-                    "1": "પાણીપૂરી",
-                    "2": "ગરમાગરમ સૂપ",
-                    "3": "મસાલા છાશ",
-                    "4": "તાજું સલાડ",
-                    "5": "ફ્રાઇમ્સ",
-                    "6": "ગુજરાતી સ્વીટ",
-                    "7": "નમકીન ફરસાણ",
-                    "8": "પંજાબી સબ્જી - (૧)",
-                    "9": "કાઠિયાવાડી સબ્જી - (૨)",
-                    "10": "સેવ લસણ શાક",
-                    "11": "દહીં ભીંડી",
-                    "12": "પનીર હાંડી",
-                    "13": "દેશી રોટલી",
-                    "14": "તળેલી પૂરી",
-                    "15": "દાલ ફ્રાય",
-                    "16": "જીરા રાઈસ",
-                    "17": "દેશી કઢી",
-                    "18": "ચૂલાની ખીચડી"
-                },
-                "descs": {
-                    "1": "મસાલેદાર બટાકા-ચણાના પૂરણ સાથે પુદીના અને આંબલીના સ્વાદિષ્ટ પાણીથી ભરેલી કરકરી પુરીઓ.",
-                    "2": "ભોજનની શરૂઆત કરવા માટે આદુ, મરી અને તાજા શાકભાજીથી બનેલો હેલ્ધી ગરમ વેજ સૂપ.",
-                    "3": "શેકેલા જીરા, સંચળ અને લીલા ધાણાથી સુગંધિત, ઠંડી અને પાચક કાઠિયાવાડી મસાલા છાશ.",
-                    "4": "કોબીજ, મૂળા, ગાજર અને લીંબુ-મરચાના મિશ્રણથી બનેલું ક્રિસ્પી અને હેલ્ધી લીલું સલાડ.",
-                    "5": "ભોજન સાથે ખાવા માટે મુખવાસ તરીકે ઉપયોગી અને કરકરા તેલમાં તળેલા રંગબેરંગી વેફર્સ/ફ્રાઇમ્સ.",
-                    "6": "તમારા મુખને મીઠું કરાવવા માટે ઘીથી લથપથ ગરમાગરમ મોહનથાળ, લાડુ અથવા સોફ્ટ ગુલાબજાંબુ.",
-                    "7": "તાજી ચટણી અને લીલા મરચા સાથે પીરસાતા ગરમાગરમ ભજીયા, ખમણ ઢોકળા કે ક્રિસ્પી સમોસા.",
-                    "8": "ટામેટા અને મલાઈદાર રિચ ગ્રેવીમાં રાંધેલા મિક્સ શાકભાજી અને પનીરનો સ્વાદિષ્ટ પંજાબી મસાલા દમદાર દબદબો.",
-                    "9": "અસલ લાકડાના ચૂલા પર રાંધેલું અસલ ચટાકેદાર કાઠિયાવાડી ટામેટા-સેવ શાક. શેકેલા મસાલાનો શાનદાર ટેસ્ટ.",
-                    "10": "અમારી ખાસ લસણની તીખી ચટણી અને રિચ રેડ ગ્રેવીમાં ડૂબેલી ક્રિસ્પી સેવ. સ્વાદિષ્ટ અને તીખું શાક જે ચૂલાના રોટલા સાથે બેસ્ટ લાગે છે.",
-                    "11": "દહીંના માધ્યમમાં ક્રિસ્પી ફ્રાય કરેલી ભીંડીને કાઠિયાવાડી મસાલાથી કુક કરવામાં આવે છે. સહેજ ખાટો-મીઠો ટેસ્ટી સ્વાદ.",
-                    "12": "નરમ કોટેજ ચીઝ (પનીર) ના ક્યુબ્સને પંજાબી મસાલા અને ઘટ્ટ ક્રીમી ગ્રેવી સાથે માટીની હાંડીમાં ધીમી આંચે પકવવામાં આવે છે.",
-                    "13": "લોખંડની તવી પર તાજી શેકેલી, અસલ ઘીથી ચોપડેલી પાતળી અને મુલાયમ દેશી ઘઉંની ગરમાગરમ રોટલી.",
-                    "14": "ગરમાગરમ શાક સાથે ખાવા માટે સોનેરી રંગે તળાયેલી દડા જેવી ફૂલેલી અને સોફ્ટ પુરીઓ.",
-                    "15": "ડુંગળી, લસણ, ટમેટા અને લાલ મરચાના દેશી ઘીવાળા તડકાથી વઘારેલી સ્વાદિષ્ટ અને ક્રીમી તુવેર દાળ.",
-                    "16": "બાસમતી ચોખાને દેશી ઘીમાં સાંતળીને આખા જીરા અને તેજપત્તા સાથે બનાવેલો સુગંધિત અને છૂટો જીરા ભાત.",
-                    "17": "ખાટા દહીં, બેસન, મરચા-આદુ અને મીઠા લીમડાના લવિંગ-તજના ગરમ તડકાથી બનેલી ટેસ્ટી ગુજરાતી કઢી.",
-                    "18": "દેશી ચૂલા પર બનાવેલી મગની દાળ અને ચોખાની નરમ અને પૌષ્ટિક ગરમાગરમ ઘી વાળી કાઠિયાવાડી ખીચડી."
-                },
-                "reviews": {
-                    "1": "નડિયાદમાં સેવ લસણ શાક ખાવા માટે આનાથી બેસ્ટ કોઈ જગ્યા જ નથી! ગરમાગરમ દેશી ચૂલાના રોટલા સાથે ઠંડી છાશ પીવાની એટલી મજા પડી ગઈ કે અદભુત અનુભવ રહ્યો. ગાર્ડન એરિયા બાળકો માટે ખૂબ સરસ છે.",
-                    "2": "માત્ર ₹૨૦૦માં ૧૮ સ્વાદિષ્ટ કાઠિયાવાડી વાનગીઓની અનલિમિટેડ થાળી એટલે ખરેખર પૈસા વસૂલ સ્કીમ. એકે-એક વાનગી એકદમ ફ્રેશ અને ટેસ્ટી હતી. ભીડ હોવા છતાં સ્ટાફનું સર્વિસ આપવાની ધગશ કાબિલે તારીફ છે.",
-                    "3": "અમે અમારા પરિવારના ૨૦ લોકો સાથે અહીં ગેટ-ટુગેધર રાખ્યું હતું. અમને બિલ પર ૧૦% ડિસ્કાઉન્ટ મળ્યું અને ખાવાની વ્યવસ્થા ખૂબ સરસ રહી. વાતાવરણ ગાર્ડન જેવું ખુલ્લું હોવાથી બધાને મજા આવી."
-                },
-                "rlocs": {
-                    "1": "સ્થાનિક ગાઇડ, ગૂગલ રીવ્યુ",
-                    "2": "ગૂગલ બિઝનેસ યુઝર",
-                    "3": "સ્થાનિક બિઝનેસ ઓનર"
-                },
-                "rauths": {
-                    "1": "હાર્દિક પટેલ",
-                    "2": "પ્રિયા શાહ",
-                    "3": "રાજેશ વાઘેલા"
-                }
-            },
-            "en": {
-                "title": "Dankawala - Kathiyawadi Garden Restaurant Menu",
-                "nav-text": "Dankawala Kathiyawadi",
-                "theme-dark": "Dark Mode",
-                "theme-light": "Light Mode",
-                "hero-badge": "Authentic Kathiyawadi Taste",
-                "hero-title": "Dankawala Kathiyawadi Garden Restaurant",
-                "hero-desc": "Savor traditional wood-fired Kathiyawadi delicacies cooked on classic earthen stoves, served in a spacious, breezy open-air garden setting in Nadiad.",
-                "hero-menu": "Explore Menu",
-                "hero-contact": "Contact Us",
-                //
-                "story-sub": "A Warm Welcome",
-                "story-title": "Our Story",
-                "story-subtitle": "True Garden Dining in Nadiad, Gujarat",
-                "story-p1": "Located near Piplag Chowkadi along the Anand Highway, right beside the Bhuwaneshwar Mahadev Temple, <strong>Dankawala Kathiyawadi Garden Restaurant</strong> is a culinary landmark known for its rustic, authentic recipes. We have preserved the age-old heritage of slow-cooking over firewood stoves.",
-                "story-p2": "Our expansive garden ambiance offers a serene escape from city hustle, ideal for peaceful family dinners and gatherings. Freshly roasted rotlas, fiery-spiced curries, and generous Gujarati hospitality form the core of our brand.",
-                //
-                "feat1": "Expansive Garden Seating",
-                "feat2": "Traditional Firewood Cooking",
-                "feat3": "Family Friendly Atmosphere",
-                "feat4": "Ample Parking Space",
-                //
-                "thali-badge": "Our Signature Special",
-                "thali-title": "Unlimited Gujarati & Kathiyawadi Thali",
-                "thali-currency": "₹",
-                "thali-per-person": "/ guest",
-                "thali-desc": "Indulge in a royal feast featuring over 18 traditional dishes. Enjoy unlimited refills of hot clay-oven rotli, puffed puris, signature sev lasan curry, cooling chaas, and sweet desserts.",
-                "promo1-title": "10% Flat Group Discount",
-                "promo1-desc": "Bring your friends and family! Enjoy flat 10% off on group bookings of 15 guests or more.",
-                "promo2-title": "Kid-Friendly Servings",
-                "promo2-desc": "Special spice adjustments and discounts are available for families dining with little children.",
-                "thali-wait": "To ensure absolute freshness, please allow 15 to 20 minutes for our slow-cooked dishes to be served.",
-                //
-                "menu-title": "Royal Kathiyawadi Menu",
-                "menu-desc": "Explore all 18 freshly-prepared items served unlimited as part of our signature Thali feast.",
-                //
-                "filter-all": "All Items",
-                "filter-starters": "Starters & Savories",
-                "filter-curries": "Curries (Subjis)",
-                "filter-breads": "Fresh Breads",
-                "filter-sides": "Rice & Lentil Sides",
-                "filter-drinks": "Sweets & Drinks",
-                //
-                "testi-title": "Happy Guests",
-                "testi-desc": "Read authentic reviews from Google Maps showing why diners love our garden restaurant.",
-                //
-                "contact-title": "Location & Timings",
-                "contact-desc": "Plan your visit or reach out to us directly for group reservations and catering inquiries.",
-                //
-                "info-time-title": "Opening Hours",
-                "info-time-desc": "Open Daily: 07:00 AM to 11:00 PM",
-                "info-call-title": "Reservations & Call Orders",
-                "info-call-btn": "Call Now",
-                "info-addr-title": "Our Location Address",
-                "info-addr-desc": "Piplag Chowkadi, Anand Highway, Near Bhuwaneshwar Mahadev, Piplag, Nadiad, Gujarat - 387002",
-                //
-                "footer-copy": "&copy; 2026, Dankawala Kathiyawadi Garden Restaurant. All Rights Reserved.",
-                "footer-disc": "*A minimum group of <span>15 guests</span> is required to avail of the 10% discount.",
-                //
-                // Item details translation in English
-                "titles": {
-                    "1": "Panipuri",
-                    "2": "Hot Veg Soup",
-                    "3": "Masala Buttermilk",
-                    "4": "Fresh Garden Salad",
-                    "5": "Crunchy Fryms",
-                    "6": "Gujarati Sweet",
-                    "7": "Namkeen Farsan",
-                    "8": "Punjabi Subji (1)",
-                    "9": "Kathiyawadi Subji (2)",
-                    "10": "Sev Lasan Curry",
-                    "11": "Dahi Bhindi",
-                    "12": "Paneer Handi",
-                    "13": "Ghee Wheat Rotli",
-                    "14": "Puffed Puri",
-                    "15": "Dal Fry",
-                    "16": "Jeera Basmati Rice",
-                    "17": "Traditional Kadhi",
-                    "18": "Woodfired Khichdi"
-                },
-                "descs": {
-                    "1": "Crispy hollow semolina spheres served with spiced potato chickpea filling and tangy mint-coriander water.",
-                    "2": "A warm, soothing broth packed with seasonal vegetables, ginger, and crushed black pepper to spark your appetite.",
-                    "3": "A refreshing, ice-cold traditional yogurt drink flavored with toasted cumin, black salt, and coriander.",
-                    "4": "A crispy platter of fresh shredded cabbage, radishes, carrots, spiced up with green chilies and lemon juice.",
-                    "5": "Crisp, light, fried colorful crackers serving as the perfect crunchy sidekick to your authentic meal.",
-                    "6": "A rich traditional sweet such as ghee-roasted Mohanthal, soft Ladoo, or warm syrup-dipped Gulab Jamuns.",
-                    "7": "Piping hot Gujarati fritters (Bhajiya), spongy Khaman Dhokla, or crispy potato samosas served with tangy chutneys.",
-                    "8": "A delicious medley of seasonal vegetables and fresh paneer simmered in a buttery, spiced tomato-onion gravy.",
-                    "9": "Authentic Sev Tameta Nu Shaak - spicy chickpea noodles cooked in a tangy, slow-simmered tomato broth on open fires.",
-                    "10": "Our house specialty. Spicy, crispy gram-flour sev cooked in a rich, red garlic gravy. Fiery, deep taste perfect with hot Rotla.",
-                    "11": "Fresh pan-seared okra simmered in a mildly-spiced, rich and tangy yogurt curry base. A satisfying mild flavor.",
-                    "12": "Soft cottage cheese cubes slow-cooked in a classic, thick creamy tomato-cashew curry served in a traditional clay vessel.",
-                    "13": "Piping hot, paper-thin country-style wheat flatbreads toasted on flat iron skillets and smeared with pure desi ghee.",
-                    "14": "Light, golden-fried puffed breads prepared fresh at the live kitchen counter to enjoy with rich curries.",
-                    "15": "Creamy cooked yellow lentils tempered with a fragrant sputtering of ghee, onions, garlic, and red chilies.",
-                    "16": "Fragrant basmati rice sautéed in pure ghee, spiced lightly with cumin seeds and aromatic bay leaves.",
-                    "17": "A sweet, sour, and comforting spiced yogurt soup prepared with gram flour and tempered with cloves and curry leaves.",
-                    "18": "Comforting, highly digestible blend of rice and green moong lentils slow-cooked on traditional wood stoves with ghee."
-                },
-                "reviews": {
-                    "1": "There is no better place in Nadiad to enjoy Sev Lasan! Eating it with steaming hot wood-fired Rotla and a glass of buttermilk was pure bliss. The garden atmosphere is perfect for children to play around.",
-                    "2": "Unlimited 18 items for just ₹200 is an absolute steal! Every single dish was fresh, delicious, and tasted very authentic. Despite the huge weekend rush, the staff was extremely friendly and fast.",
-                    "3": "We held a family get-together for 20 people here. The 10% group discount was a great benefit, but the hospitality was even better. Everyone loved the spacious open garden environment and rustic vibe."
-                },
-                "rlocs": {
-                    "1": "Local Guide, Google Review",
-                    "2": "Google Business User",
-                    "3": "Local Business Owner"
-                },
-                "rauths": {
-                    "1": "Hardik Patel",
-                    "2": "Priya Shah",
-                    "3": "Rajesh Vaghela"
-                }
-            }
-        };
-
-        // Current Language State (Default Gujarati)
-        let currentLang = 'gu';
-
-        function setLanguage(lang) {
-            currentLang = lang;
-            document.documentElement.setAttribute('lang', lang);
-
-            // Toggle active class on lang switcher buttons
-            document.getElementById('lang-gu').classList.toggle('active', lang === 'gu');
-            document.getElementById('lang-en').classList.toggle('active', lang === 'en');
-
-            // Update Page Meta/Title
-            document.title = langData[lang]['title'];
-
-            // Update Simple Text Blocks
-            document.getElementById('nav-logo-text').textContent = langData[lang]['nav-text'];
-
-            // Theme toggle text translation
-            const isDark = document.documentElement.classList.contains('theme-dark');
-            document.getElementById('theme-toggle-text').textContent = isDark ? langData[lang]['theme-dark'] : langData[lang]['theme-light'];
-
-            document.getElementById('hero-badge-text').textContent = langData[lang]['hero-badge'];
-            document.getElementById('hero-main-title').textContent = langData[lang]['hero-title'];
-            document.getElementById('hero-main-desc').textContent = langData[lang]['hero-desc'];
-
-            // Button link text
-            const heroMenuBtn = document.getElementById('hero-btn-menu');
-            heroMenuBtn.innerHTML = '';
-            if (lang === 'gu') {
-                heroMenuBtn.innerHTML = `<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3h3v16h2V2h-5c-1.1 0-2 .9-2 2v7h2V6z"/></svg> મેનુ જુઓ`;
-            } else {
-                heroMenuBtn.innerHTML = `<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3h3v16h2V2h-5c-1.1 0-2 .9-2 2v7h2V6z"/></svg> Explore Menu`;
-            }
-            document.getElementById('hero-btn-contact').textContent = langData[lang]['hero-contact'];
-
-            // About us section
-            document.getElementById('story-sub').textContent = langData[lang]['story-sub'];
-            document.getElementById('story-title').textContent = langData[lang]['story-title'];
-            document.getElementById('story-subtitle').textContent = langData[lang]['story-subtitle'];
-            document.getElementById('story-p1').innerHTML = langData[lang]['story-p1'];
-            document.getElementById('story-p2').innerHTML = langData[lang]['story-p2'];
-
-            // Tags
-            document.getElementById('feat-1').textContent = langData[lang]['feat1'];
-            document.getElementById('feat-2').textContent = langData[lang]['feat2'];
-            document.getElementById('feat-3').textContent = langData[lang]['feat3'];
-            document.getElementById('feat-4').textContent = langData[lang]['feat4'];
-
-            // Showcase
-            document.getElementById('thali-badge-text').textContent = langData[lang]['thali-badge'];
-            document.getElementById('thali-title-text').textContent = langData[lang]['thali-title'];
-            document.getElementById('thali-currency').textContent = langData[lang]['thali-currency'];
-            document.getElementById('thali-per-person').textContent = langData[lang]['thali-per-person'];
-            document.getElementById('thali-desc-text').textContent = langData[lang]['thali-desc'];
-            document.getElementById('promo1-title').textContent = langData[lang]['promo1-title'];
-            document.getElementById('promo1-desc').textContent = langData[lang]['promo1-desc'];
-            document.getElementById('promo2-title').textContent = langData[lang]['promo2-title'];
-            document.getElementById('promo2-desc').textContent = langData[lang]['promo2-desc'];
-            document.getElementById('thali-wait-text').textContent = langData[lang]['thali-wait'];
-
-            // Menu headings & filters
-            document.getElementById('menu-section-title').textContent = langData[lang]['menu-title'];
-            document.getElementById('menu-section-desc').textContent = langData[lang]['menu-desc'];
-
-            document.getElementById('filter-all').textContent = langData[lang]['filter-all'];
-            document.getElementById('filter-starters').textContent = langData[lang]['filter-starters'];
-            document.getElementById('filter-curries').textContent = langData[lang]['filter-curries'];
-            document.getElementById('filter-breads').textContent = langData[lang]['filter-breads'];
-            document.getElementById('filter-sides').textContent = langData[lang]['filter-sides'];
-            document.getElementById('filter-drinks').textContent = langData[lang]['filter-drinks'];
-
-            // Testimonials
-            document.getElementById('testi-section-title').textContent = langData[lang]['testi-title'];
-            document.getElementById('testi-section-desc').textContent = langData[lang]['testi-desc'];
-
-            // Testimonial cards
-            for (let i = 1; i <= 3; i++) {
-                document.getElementById(`review-text-${i}`).textContent = langData[lang]['reviews'][i];
-                document.getElementById(`review-author-${i}`).textContent = langData[lang]['rauths'][i];
-                document.getElementById(`review-location-${i}`).textContent = langData[lang]['rlocs'][i];
-            }
-
-            // Contact details
-            document.getElementById('contact-section-title').textContent = langData[lang]['contact-title'];
-            document.getElementById('contact-section-desc').textContent = langData[lang]['contact-desc'];
-            document.getElementById('info-time-title').textContent = langData[lang]['info-time-title'];
-            document.getElementById('info-time-desc').textContent = langData[lang]['info-time-desc'];
-            document.getElementById('info-call-title').textContent = langData[lang]['info-call-title'];
-            document.getElementById('info-call-btn').textContent = langData[lang]['info-call-btn'];
-            document.getElementById('info-addr-title').textContent = langData[lang]['info-addr-title'];
-            document.getElementById('info-addr-desc').textContent = langData[lang]['info-addr-desc'];
-
-            // Footer
-            document.getElementById('footer-copy-text').innerHTML = langData[lang]['footer-copy'];
-            document.getElementById('footer-disc-text').innerHTML = langData[lang]['footer-disc'];
-
-            // Update Menu Card lists
-            for (let i = 1; i <= 18; i++) {
-                const titleEl = document.getElementById(`title-item-${i}`);
-                const descEl = document.getElementById(`desc-item-${i}`);
-                const engEl = document.getElementById(`eng-item-${i}`);
-                const badgeEl = document.getElementById(`badge-item-${i}`);
-
-                if (titleEl) titleEl.textContent = langData[lang]['titles'][i];
-                if (descEl) descEl.textContent = langData[lang]['descs'][i];
-                if (engEl) engEl.textContent = langData[lang]['titles'][i]; // keep English transliteration as secondary
-                if (badgeEl) badgeEl.textContent = i === 10 ? (lang === 'gu' ? 'મુખ્ય વાનગી' : 'Signature') : (lang === 'gu' ? 'અનલિમિટેડ' : 'Unlimited');
-            }
-        }
-
-        // Theme Toggle script
-        const themeBtn = document.getElementById('theme-toggle');
-        const sunIcon = document.getElementById('theme-sun-icon');
-        const moonIcon = document.getElementById('theme-moon-icon');
-
-        themeBtn.addEventListener('click', () => {
-            const html = document.documentElement;
-            if (html.classList.contains('theme-dark')) {
-                html.classList.replace('theme-dark', 'theme-light');
-                sunIcon.style.display = 'none';
-                moonIcon.style.display = 'block';
-                document.getElementById('theme-toggle-text').textContent = langData[currentLang]['theme-light'];
-                document.getElementById('hero-logo').src = 'logo.dark.webp';
-            } else {
-                html.classList.replace('theme-light', 'theme-dark');
-                sunIcon.style.display = 'block';
-                moonIcon.style.display = 'none';
-                document.getElementById('theme-toggle-text').textContent = langData[currentLang]['theme-dark'];
-                document.getElementById('hero-logo').src = 'logo.dark.webp'; // keep logo same due to dark bg.
-            }
-        });
-
-        // Initialize theme settings on system configuration
-        function initTheme() {
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            if (prefersDark) {
-                document.documentElement.className = 'theme-dark';
-                sunIcon.style.display = 'block';
-                moonIcon.style.display = 'none';
-                document.getElementById('hero-logo').src = 'logo.dark.webp';
-            } else {
-                document.documentElement.className = 'theme-light';
-                sunIcon.style.display = 'none';
-                moonIcon.style.display = 'block';
-                document.getElementById('hero-logo').src = 'logo.light.webp';
-            }
-        }
-
-        // Menu dynamic category filter
-        function filterMenu(category, btnElement) {
-            // Remove active classes from all filter buttons
-            const buttons = document.querySelectorAll('.filter-btn');
-            buttons.forEach(btn => btn.classList.remove('active'));
-
-            // Add active class to clicked button
-            btnElement.classList.add('active');
-
-            // Toggle element card visibility based on data attributes
-            const cards = document.querySelectorAll('.menu-card');
-            cards.forEach(card => {
-                const cardCategory = card.getAttribute('data-category');
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(10px)';
-
-                setTimeout(() => {
-                    if (category === 'all' || cardCategory === category) {
-                        card.style.display = 'flex';
-                        setTimeout(() => {
-                            card.style.opacity = '1';
-                            card.style.transform = 'translateY(0)';
-                        }, 50);
-                    } else {
-                        card.style.display = 'none';
-                    }
-                }, 200);
-            });
-        }
-
-        // Back to top scroll listener
-        window.addEventListener('scroll', () => {
-            const backToTopBtn = document.getElementById('back-to-top');
-            if (window.scrollY > 300) {
-                backToTopBtn.classList.add('show');
-            } else {
-                backToTopBtn.classList.remove('show');
-            }
-        });
-
-        // Init on page load
-        window.addEventListener('DOMContentLoaded', () => {
-            initTheme();
-            setLanguage('gu'); // Default language is Gujarati
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
