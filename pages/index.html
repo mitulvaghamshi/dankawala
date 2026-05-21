@@ -136,7 +136,7 @@
             --bg-primary: var(--light-bg);
             --bg-secondary: var(--white);
             --bg-card: var(--light-card);
-            --bg-glass: rgba(255, 255, 255, 0.85);
+            --bg-glass: rgba(255, 255, 255, 0.4);
             --border-color: rgba(226, 112, 58, 0.15);
             --text-primary: var(--text-dark);
             --text-secondary: #4a3e2c;
@@ -148,7 +148,7 @@
             --bg-primary: var(--black-bg);
             --bg-secondary: #1a1611;
             --bg-card: var(--dark-card);
-            --bg-glass: rgba(32, 27, 19, 0.85);
+            --bg-glass: rgba(32, 27, 19, 0.4);
             --border-color: rgba(223, 183, 108, 0.15);
             --text-primary: var(--text-light);
             --text-secondary: #d3c4b1;
@@ -2061,7 +2061,7 @@
 
                 if (titleEl) titleEl.textContent = langData[lang]['titles'][i];
                 if (descEl) descEl.textContent = langData[lang]['descs'][i];
-                if (engEl) engEl.textContent = langData[lang]['en']['titles'][i]; // keep English transliteration as secondary
+                if (engEl) engEl.textContent = langData[lang]['titles'][i]; // keep English transliteration as secondary
                 if (badgeEl) badgeEl.textContent = i === 10 ? (lang === 'gu' ? 'મુખ્ય વાનગી' : 'Signature') : (lang === 'gu' ? 'અનલિમિટેડ' : 'Unlimited');
             }
         }
@@ -2078,13 +2078,13 @@
                 sunIcon.style.display = 'none';
                 moonIcon.style.display = 'block';
                 document.getElementById('theme-toggle-text').textContent = langData[currentLang]['theme-light'];
-                document.getElementById('hero-logo').src = 'logo.light.webp';
+                document.getElementById('hero-logo').src = 'logo.dark.webp';
             } else {
                 html.classList.replace('theme-light', 'theme-dark');
                 sunIcon.style.display = 'block';
                 moonIcon.style.display = 'none';
                 document.getElementById('theme-toggle-text').textContent = langData[currentLang]['theme-dark'];
-                document.getElementById('hero-logo').src = 'logo.dark.webp';
+                document.getElementById('hero-logo').src = 'logo.dark.webp'; // keep logo same due to dark bg.
             }
         });
 
