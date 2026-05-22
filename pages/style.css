@@ -242,6 +242,8 @@ header.hero-section::before {
 }
 
 .hero-logo-img {
+    width: 100%;
+    min-width: 220px;
     max-width: 520px;
     height: auto;
     margin-bottom: 10px;
@@ -987,10 +989,6 @@ footer.site-footer {
         padding: 0 20px;
     }
 
-    .nav-logo span {
-        display: none;
-    }
-
     header.hero-section {
         height: auto;
         padding: 120px 20px 80px 20px;
@@ -1014,6 +1012,12 @@ footer.site-footer {
     .btn-secondary {
         width: 100%;
         justify-content: center;
+    }
+}
+
+@media (max-width: 520px) {
+    .nav-logo span {
+        display: none;
     }
 }
 
