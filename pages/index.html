@@ -94,6 +94,10 @@
 </head>
 
 <body>
+    <noscript>
+        <meta http-equiv="refresh" content="0; url=https://github.com/mitulvaghamshi/dankawala/blob/main/README.md">
+    </noscript>
+
     <!-- Top Navigation -->
     <nav class="nav-bar">
         <a href="#" class="nav-logo" id="nav-logo-link">
@@ -109,13 +113,13 @@
                 <svg id="theme-moon-icon" viewBox="0 0 24 24">
                     <path d="M12.3 22h-.1c-5.5 0-10-4.5-10-10 0-4.8 3.5-8.9 8.2-9.8.6-.1 1.2.3 1.3.9.1.6-.3 1.2-.9 1.3-3.7.7-6.4 4-6.4 7.8 0 4.4 3.6 8 8 8 3.8 0 7.1-2.7 7.8-6.4.1-.6.7-1 1.3-.9.6.1 1 .7.9 1.3-.9 4.7-5 8.2-9.8 8.2z" />
                 </svg>
-                <span id="theme-toggle-text">શ્યામ મોડ</span>
+                <span class="theme-mode-text" id="theme-toggle-text">શ્વેત</span>
             </button>
 
             <!-- Language Toggle Switcher -->
             <div class="lang-switch-wrapper">
-                <button class="lang-option active" id="lang-gu" onclick="setLanguage('gu')">ગુજરાતી</button>
-                <button class="lang-option" id="lang-en" onclick="setLanguage('en')">English</button>
+                <button class="lang-option active" id="lang-gu" onclick="setLanguage('gu')">અ</button>
+                <button class="lang-option" id="lang-en" onclick="setLanguage('en')">A</button>
             </div>
         </div>
     </nav>
@@ -169,7 +173,7 @@
                 <span class="thali-badge" id="thali-badge-text">અમારો ખાસ ધમાકો</span>
                 <h2 class="thali-title" id="thali-title-text">અનલિમિટેડ ગુજરાતી અને કાઠિયાવાડી થાળી</h2>
                 <div class="thali-price">
-                    <span id="thali-currency">₹</span>૨૦૦<span class="small" id="thali-per-person">/ વ્યક્તિ</span>
+                    <span id="thali-currency">₹</span><span class="small" id="thali-per-person">/ વ્યક્તિ</span>
                 </div>
                 <p class="thali-desc" id="thali-desc-text">અમારી અસલ કાઠિયાવાડી થાળીમાં ૧૮ થી પણ વધુ સ્વાદિષ્ટ વાનગીઓનો સમાવેશ થાય છે. ગરમ-ગરમ રોટલી, પૂરી, સેવ લસણ, કઢી-ખીચડી અને અસંખ્યrefills સાથે પેટ ભરીને તૃપ્તિનો અહેસાસ કરો.</p>
 
@@ -211,7 +215,7 @@
             <button class="filter-btn" onclick="filterMenu('curries', this)" id="filter-curries">શાક વાનગીઓ (Curries)</button>
             <button class="filter-btn" onclick="filterMenu('breads', this)" id="filter-breads">રોટલી અને પૂરી (Breads)</button>
             <button class="filter-btn" onclick="filterMenu('sides', this)" id="filter-sides">દાળ, ભાત અને ખીચડી (Rice & Sides)</button>
-            <button class="filter-btn" onclick="filterMenu('sweets-drinks', this)" id="filter-drinks">મીઠાઈ અને પીણાં (Sweets & Drinks)</button>
+            <button class="filter-btn" onclick="filterMenu('drinks', this)" id="filter-drinks">મીઠાઈ અને પીણાં (Sweets & Drinks)</button>
         </div>
 
         <!-- Menu Cards Grid -->
@@ -219,13 +223,13 @@
             <!-- Dynamic items will be controlled/injected by JS but written statically here for SEO -->
 
             <!-- Item 1: Panipuri -->
-            <div class="menu-card fade-in-card" data-category="starters">
+            <div class="menu-card fade-in-card" id="menu-card-1" data-category="starters">
                 <div class="menu-card-img">
-                    <img src="items/1.panipuri.opt.webp" alt="Spicy Sev Lasan Curry">
+                    <img id="menu-card-img-1" src="items/1.Panipuri.webp" alt="Panipuri (પાણીપૂરી)">
                     <span class="menu-card-badge" id="badge-item-1">Unlimited</span>
                 </div>
                 <div class="menu-card-details">
-                    <span class="menu-card-num">#૧</span>
+                    <span class="menu-card-num" id="menu-card-num-1">#૧</span>
                     <h3 class="menu-card-title" id="title-item-1">પાણીપૂરી</h3>
                     <span class="menu-card-eng" id="eng-item-1">Panipuri</span>
                     <p class="menu-card-desc" id="desc-item-1">મસાલેદાર બટાકા-ચણાના પૂરણ સાથે પુદીના અને આંબલીના સ્વાદિષ્ટ પાણીથી ભરેલી કરકરી પુરીઓ.</p>
@@ -233,13 +237,13 @@
             </div>
 
             <!-- Item 2: Soup -->
-            <div class="menu-card fade-in-card" data-category="starters">
+            <div class="menu-card fade-in-card" id="menu-card-2" data-category="starters">
                 <div class="menu-card-img">
-                    <img src="items/2.soup.opt.webp" alt="Spicy Sev Lasan Curry">
+                    <img id="menu-card-img-2" src="items/2.Hot Vegetable Soup.webp" alt="Hot Vegetable Soup (ગરમાગરમ સૂપ)">
                     <span class="menu-card-badge" id="badge-item-2">Unlimited</span>
                 </div>
                 <div class="menu-card-details">
-                    <span class="menu-card-num">#૨</span>
+                    <span class="menu-card-num" id="menu-card-num-2">#૨</span>
                     <h3 class="menu-card-title" id="title-item-2">ગરમાગરમ સૂપ</h3>
                     <span class="menu-card-eng" id="eng-item-2">Hot Vegetable Soup</span>
                     <p class="menu-card-desc" id="desc-item-2">ભોજનની શરૂઆત કરવા માટે આદુ, મરી અને તાજા શાકભાજીથી બનેલો હેલ્ધી ગરમ વેજ સૂપ.</p>
@@ -247,27 +251,27 @@
             </div>
 
             <!-- Item 3: Chaas -->
-            <div class="menu-card fade-in-card" data-category="sweets-drinks">
+            <div class="menu-card fade-in-card" id="menu-card-3" data-category="sweets-drinks">
                 <div class="menu-card-img">
-                    <img src="items/3.chaas.opt.webp" alt="Spicy Sev Lasan Curry">
+                    <img id="menu-card-img-3" src="items/3.Masala Buttermilk.webp" alt="Masala Buttermilk (મસાલા છાશ)">
                     <span class="menu-card-badge" id="badge-item-3">Unlimited</span>
                 </div>
                 <div class="menu-card-details">
-                    <span class="menu-card-num">#૩</span>
+                    <span class="menu-card-num" id="menu-card-num-3">#૩</span>
                     <h3 class="menu-card-title" id="title-item-3">મસાલા છાશ</h3>
-                    <span class="menu-card-eng" id="eng-item-3">Spiced Buttermilk</span>
+                    <span class="menu-card-eng" id="eng-item-3">Masala Buttermilk</span>
                     <p class="menu-card-desc" id="desc-item-3">શેકેલા જીરા, સંચળ અને લીલા ધાણાથી સુગંધિત, ઠંડી અને પાચક કાઠિયાવાડી મસાલા છાશ.</p>
                 </div>
             </div>
 
             <!-- Item 4: Salad -->
-            <div class="menu-card fade-in-card" data-category="starters">
+            <div class="menu-card fade-in-card" id="menu-card-4" data-category="starters">
                 <div class="menu-card-img">
-                    <img src="items/4.salad.opt.webp" alt="Spicy Sev Lasan Curry">
+                    <img id="menu-card-img-4" src="items/4.Fresh Green Salad.webp" alt="Fresh Green Salad (તાજું સલાડ)">
                     <span class="menu-card-badge" id="badge-item-4">Unlimited</span>
                 </div>
                 <div class="menu-card-details">
-                    <span class="menu-card-num">#૪</span>
+                    <span class="menu-card-num" id="menu-card-num-4">#૪</span>
                     <h3 class="menu-card-title" id="title-item-4">તાજું સલાડ</h3>
                     <span class="menu-card-eng" id="eng-item-4">Fresh Green Salad</span>
                     <p class="menu-card-desc" id="desc-item-4">કોબીજ, મૂળા, ગાજર અને લીંબુ-મરચાના મિશ્રણથી બનેલું ક્રિસ્પી અને હેલ્ધી લીલું સલાડ.</p>
@@ -275,13 +279,13 @@
             </div>
 
             <!-- Item 5: Fryms -->
-            <div class="menu-card fade-in-card" data-category="starters">
+            <div class="menu-card fade-in-card" id="menu-card-5" data-category="starters">
                 <div class="menu-card-img">
-                    <img src="items/5.fraims.opt.webp" alt="Spicy Sev Lasan Curry">
+                    <img id="menu-card-img-5" src="items/5.Crunchy Fryms.webp" alt="Crunchy Fryms (ફ્રાઇમ્સ)">
                     <span class="menu-card-badge" id="badge-item-5">Unlimited</span>
                 </div>
                 <div class="menu-card-details">
-                    <span class="menu-card-num">#૫</span>
+                    <span class="menu-card-num" id="menu-card-num-5">#૫</span>
                     <h3 class="menu-card-title" id="title-item-5">ફ્રાઇમ્સ</h3>
                     <span class="menu-card-eng" id="eng-item-5">Fryms & Papad</span>
                     <p class="menu-card-desc" id="desc-item-5">ભોજન સાથે ખાવા માટે મુખવાસ તરીકે ઉપયોગી અને કરકરા તેલમાં તળેલા રંગબેરંગી વેફર્સ/ફ્રાઇમ્સ.</p>
@@ -289,13 +293,13 @@
             </div>
 
             <!-- Item 6: Sweet -->
-            <div class="menu-card fade-in-card" data-category="sweets-drinks">
+            <div class="menu-card fade-in-card" id="menu-card-6" data-category="sweets-drinks">
                 <div class="menu-card-img">
-                    <img src="items/6.sweet.opt.webp" alt="Spicy Sev Lasan Curry">
+                    <img id="menu-card-img-6" src="items/6.Gujarati Sweet.webp" alt="Gujarati Sweet (ગુજરાતી સ્વીટ)">
                     <span class="menu-card-badge" id="badge-item-6">Unlimited</span>
                 </div>
                 <div class="menu-card-details">
-                    <span class="menu-card-num">#૬</span>
+                    <span class="menu-card-num" id="menu-card-num-6">#૬</span>
                     <h3 class="menu-card-title" id="title-item-6">ગુજરાતી સ્વીટ</h3>
                     <span class="menu-card-eng" id="eng-item-6">Traditional Sweet</span>
                     <p class="menu-card-desc" id="desc-item-6">તમારા મુખને મીઠું કરાવવા માટે ઘીથી લથપથ ગરમાગરમ મોહનથાળ, લાડુ અથવા સોફ્ટ ગુલાબજાંબુ.</p>
@@ -303,13 +307,13 @@
             </div>
 
             <!-- Item 7: Farsan -->
-            <div class="menu-card fade-in-card" data-category="starters">
+            <div class="menu-card fade-in-card" id="menu-card-7" data-category="starters">
                 <div class="menu-card-img">
-                    <img src="items/7.farsan.opt.webp" alt="Spicy Sev Lasan Curry">
+                    <img id="menu-card-img-7" src="items/7.Namkeen Farsan.webp" alt="Namkeen Farsan (નમકીન ફરસાણ)">
                     <span class="menu-card-badge" id="badge-item-7">Unlimited</span>
                 </div>
                 <div class="menu-card-details">
-                    <span class="menu-card-num">#૭</span>
+                    <span class="menu-card-num" id="menu-card-num-7">#૭</span>
                     <h3 class="menu-card-title" id="title-item-7">નમકીન ફરસાણ</h3>
                     <span class="menu-card-eng" id="eng-item-7">Traditional Farsan</span>
                     <p class="menu-card-desc" id="desc-item-7">તાજી ચટણી અને લીલા મરચા સાથે પીરસાતા ગરમાગરમ ભજીયા, ખમણ ઢોકળા કે ક્રિસ્પી સમોસા.</p>
@@ -317,13 +321,13 @@
             </div>
 
             <!-- Item 8: Punjabi Subji 1 -->
-            <div class="menu-card fade-in-card" data-category="curries">
+            <div class="menu-card fade-in-card" id="menu-card-8" data-category="curries">
                 <div class="menu-card-img">
-                    <img src="items/8.punjabi.opt.webp" alt="Spicy Sev Lasan Curry">
+                    <img id="menu-card-img-8" src="items/8.Punjabi Subji (1).webp" alt="Punjabi Subji (1) (પંજાબી સબ્જી - (૧))">
                     <span class="menu-card-badge" id="badge-item-8">Unlimited</span>
                 </div>
                 <div class="menu-card-details">
-                    <span class="menu-card-num">#૮</span>
+                    <span class="menu-card-num" id="menu-card-num-8">#૮</span>
                     <h3 class="menu-card-title" id="title-item-8">પંજાબી સબ્જી - (૧)</h3>
                     <span class="menu-card-eng" id="eng-item-8">Veg Makhanwala</span>
                     <p class="menu-card-desc" id="desc-item-8">ટામેટા અને મલાઈદાર રિચ ગ્રેવીમાં રાંધેલા મિક્સ શાકભાજી અને પનીરનો સ્વાદિષ્ટ પંજાબી મસાલા દમદાર દબદબો.</p>
@@ -331,13 +335,13 @@
             </div>
 
             <!-- Item 9: Kathiyawadi Subji 2 -->
-            <div class="menu-card fade-in-card" data-category="curries">
+            <div class="menu-card fade-in-card" id="menu-card-9" data-category="curries">
                 <div class="menu-card-img">
-                    <img src="items/9.kathiyawadi.opt.webp" alt="Spicy Sev Lasan Curry">
+                    <img id="menu-card-img-9" src="items/9.Kathiyawadi Subji (2).webp" alt="Kathiyawadi Subji (2) (કાઠિયાવાડી સબ્જી - (૨))">
                     <span class="menu-card-badge" id="badge-item-9">Unlimited</span>
                 </div>
                 <div class="menu-card-details">
-                    <span class="menu-card-num">#૯</span>
+                    <span class="menu-card-num" id="menu-card-num-9">#૯</span>
                     <h3 class="menu-card-title" id="title-item-9">કાઠિયાવાડી સબ્જી - (૨)</h3>
                     <span class="menu-card-eng" id="eng-item-9">Sev Tameta Nu Shaak</span>
                     <p class="menu-card-desc" id="desc-item-9">શેકેલા મસાલા અને લાલ ટમેટાની ગ્રેવીમાં તીખા સેવ નાખી ચૂલા પર રાંધેલું અસલ ચટાકેદાર કાઠિયાવાડી ટામેટા-સેવ શાક.</p>
@@ -345,13 +349,13 @@
             </div>
 
             <!-- Item 10: Sev Lasan -->
-            <div class="menu-card fade-in-card" data-category="curries">
+            <div class="menu-card fade-in-card" id="menu-card-10" data-category="curries">
                 <div class="menu-card-img">
-                    <img src="items/10.sevlasan.opt.webp" alt="Spicy Sev Lasan Curry">
+                    <img id="menu-card-img-10" src="items/10.Sev Lasan Curry.webp" alt="Sev Lasan Curry (સેવ લસણ શાક)">
                     <span class="menu-card-badge" id="badge-item-10">Signature</span>
                 </div>
                 <div class="menu-card-details">
-                    <span class="menu-card-num">#૧૦</span>
+                    <span class="menu-card-num" id="menu-card-num-10">#૧૦</span>
                     <h3 class="menu-card-title" id="title-item-10">સેવ લસણ શાક</h3>
                     <span class="menu-card-eng" id="eng-item-10">Sev Lasan Curry</span>
                     <p class="menu-card-desc" id="desc-item-10">અમારી ખાસ લસણની તીખી ચટણી અને રિચ રેડ ગ્રેવીમાં ડૂબેલી ક્રિસ્પી સેવ. સ્વાદિષ્ટ અને તીખું શાક જે ચૂલાના રોટલા સાથે બેસ્ટ લાગે છે.</p>
@@ -359,13 +363,13 @@
             </div>
 
             <!-- Item 11: Dahi Bhindi -->
-            <div class="menu-card fade-in-card" data-category="curries">
+            <div class="menu-card fade-in-card" id="menu-card-11" data-category="curries">
                 <div class="menu-card-img">
-                    <img src="items/11.dahibhindi.opt.webp" alt="Spicy Sev Lasan Curry">
+                    <img id="menu-card-img-11" src="items/11.Dahi Bhindi.webp" alt="Dahi Bhindi (દહીં ભીંડી)">
                     <span class="menu-card-badge" id="badge-item-11">Unlimited</span>
                 </div>
                 <div class="menu-card-details">
-                    <span class="menu-card-num">#૧૧</span>
+                    <span class="menu-card-num" id="menu-card-num-11">#૧૧</span>
                     <h3 class="menu-card-title" id="title-item-11">દહીં ભીંડી</h3>
                     <span class="menu-card-eng" id="eng-item-11">Dahi Bhindi</span>
                     <p class="menu-card-desc" id="desc-item-11">દહીંના માધ્યમમાં ક્રિસ્પી ફ્રાય કરેલી ભીંડીને કાઠિયાવાડી મસાલાથી કુક કરવામાં આવે છે. સહેજ ખાટો-મીઠો ટેસ્ટી સ્વાદ.</p>
@@ -373,13 +377,13 @@
             </div>
 
             <!-- Item 12: Paneer Handi -->
-            <div class="menu-card fade-in-card" data-category="curries">
+            <div class="menu-card fade-in-card" id="menu-card-12" data-category="curries">
                 <div class="menu-card-img">
-                    <img src="items/12.panirhandi.opt.webp" alt="Spicy Sev Lasan Curry">
+                    <img id="menu-card-img-12" src="items/12.Paneer Handi.webp" alt="Paneer Handi (પનીર હાંડી)">
                     <span class="menu-card-badge" id="badge-item-12">Unlimited</span>
                 </div>
                 <div class="menu-card-details">
-                    <span class="menu-card-num">#૧૨</span>
+                    <span class="menu-card-num" id="menu-card-num-12">#૧૨</span>
                     <h3 class="menu-card-title" id="title-item-12">પનીર હાંડી</h3>
                     <span class="menu-card-eng" id="eng-item-12">Paneer Handi</span>
                     <p class="menu-card-desc" id="desc-item-12">નરમ કોટેજ ચીઝ (પનીર) ના ક્યુબ્સને પંજાબી મસાલા અને ઘટ્ટ ક્રીમી ગ્રેવી સાથે માટીની હાંડીમાં ધીમી આંચે પકવવામાં આવે છે.</p>
@@ -387,13 +391,13 @@
             </div>
 
             <!-- Item 13: Rotli -->
-            <div class="menu-card fade-in-card" data-category="breads">
+            <div class="menu-card fade-in-card" id="menu-card-13" data-category="breads">
                 <div class="menu-card-img">
-                    <img src="items/13.rotla.opt.webp" alt="Spicy Sev Lasan Curry">
+                    <img id="menu-card-img-13" src="items/13.Ghee Wheat Rotli.webp" alt="Ghee Wheat Rotli (દેશી રોટલી)">
                     <span class="menu-card-badge" id="badge-item-13">Unlimited</span>
                 </div>
                 <div class="menu-card-details">
-                    <span class="menu-card-num">#૧૩</span>
+                    <span class="menu-card-num" id="menu-card-num-13">#૧૩</span>
                     <h3 class="menu-card-title" id="title-item-13">દેશી રોટલી</h3>
                     <span class="menu-card-eng" id="eng-item-13">Hot Wheat Rotli</span>
                     <p class="menu-card-desc" id="desc-item-13">લોખંડની તવી પર તાજી શેકેલી, અસલ ઘીથી ચોપડેલી પાતળી અને મુલાયમ દેશી ઘઉંની ગરમાગરમ રોટલી.</p>
@@ -401,13 +405,13 @@
             </div>
 
             <!-- Item 14: Puri -->
-            <div class="menu-card fade-in-card" data-category="breads">
+            <div class="menu-card fade-in-card" id="menu-card-14" data-category="breads">
                 <div class="menu-card-img">
-                    <img src="items/14.puri.opt.webp" alt="Spicy Sev Lasan Curry">
+                    <img id="menu-card-img-14" src="items/14.Puffed Puri.webp" alt="Puffed Puri (તળેલી પૂરી)">
                     <span class="menu-card-badge" id="badge-item-14">Unlimited</span>
                 </div>
                 <div class="menu-card-details">
-                    <span class="menu-card-num">#૧૪</span>
+                    <span class="menu-card-num" id="menu-card-num-14">#૧૪</span>
                     <h3 class="menu-card-title" id="title-item-14">તળેલી પૂરી</h3>
                     <span class="menu-card-eng" id="eng-item-14">Fluffy Puris</span>
                     <p class="menu-card-desc" id="desc-item-14">ગરમાગરમ શાક સાથે ખાવા માટે સોનેરી રંગે તળાયેલી દડા જેવી ફૂલેલી અને સોફ્ટ પુરીઓ.</p>
@@ -415,13 +419,13 @@
             </div>
 
             <!-- Item 15: Dal Fry -->
-            <div class="menu-card fade-in-card" data-category="sides">
+            <div class="menu-card fade-in-card" id="menu-card-15" data-category="sides">
                 <div class="menu-card-img">
-                    <img src="items/15.dalfry.opt.webp" alt="Spicy Sev Lasan Curry">
+                    <img id="menu-card-img-15" src="items/15.Dal Fry.webp" alt="Dal Fry (દાલ ફ્રાય)">
                     <span class="menu-card-badge" id="badge-item-15">Unlimited</span>
                 </div>
                 <div class="menu-card-details">
-                    <span class="menu-card-num">#૧૫</span>
+                    <span class="menu-card-num" id="menu-card-num-15">#૧૫</span>
                     <h3 class="menu-card-title" id="title-item-15">દાલ ફ્રાય</h3>
                     <span class="menu-card-eng" id="eng-item-15">Dal Fry</span>
                     <p class="menu-card-desc" id="desc-item-15">ડુંગળી, લસણ, ટમેટા અને લાલ મરચાના દેશી ઘીવાળા તડકાથી વઘારેલી સ્વાદિષ્ટ અને ક્રીમી તુવેર દાળ.</p>
@@ -429,13 +433,13 @@
             </div>
 
             <!-- Item 16: Jeera Rice -->
-            <div class="menu-card fade-in-card" data-category="sides">
+            <div class="menu-card fade-in-card" id="menu-card-16" data-category="sides">
                 <div class="menu-card-img">
-                    <img src="items/16.jirarice.opt.webp" alt="Spicy Sev Lasan Curry">
+                    <img id="menu-card-img-16" src="items/16.Jeera Basmati Rice.webp" alt="Jeera Basmati Rice (જીરા રાઈસ)">
                     <span class="menu-card-badge" id="badge-item-16">Unlimited</span>
                 </div>
                 <div class="menu-card-details">
-                    <span class="menu-card-num">#૧૬</span>
+                    <span class="menu-card-num" id="menu-card-num-16">#૧૬</span>
                     <h3 class="menu-card-title" id="title-item-16">જીરા રાઈસ</h3>
                     <span class="menu-card-eng" id="eng-item-16">Jeera Rice</span>
                     <p class="menu-card-desc" id="desc-item-16">બાસમતી ચોખાને દેશી ઘીમાં સાંતળીને આખા જીરા અને તેજપત્તા સાથે બનાવેલો સુગંધિત અને છૂટો જીરા ભાત.</p>
@@ -443,13 +447,13 @@
             </div>
 
             <!-- Item 17: Kadhi -->
-            <div class="menu-card fade-in-card" data-category="sides">
+            <div class="menu-card fade-in-card" id="menu-card-17" data-category="sides">
                 <div class="menu-card-img">
-                    <img src="items/17.kadhi.opt.webp" alt="Spicy Sev Lasan Curry">
+                    <img id="menu-card-img-17" src="items/17.Traditional Kadhi.webp" alt="Traditional Kadhi (દેશી કઢી)">
                     <span class="menu-card-badge" id="badge-item-17">Unlimited</span>
                 </div>
                 <div class="menu-card-details">
-                    <span class="menu-card-num">#૧૭</span>
+                    <span class="menu-card-num" id="menu-card-num-17">#૧૭</span>
                     <h3 class="menu-card-title" id="title-item-17">દેશી કઢી</h3>
                     <span class="menu-card-eng" id="eng-item-17">Gujarati Kadhi</span>
                     <p class="menu-card-desc" id="desc-item-17">ખાટા દહીં, બેસન, મરચા-આદુ અને મીઠા લીમડાના લવિંગ-તજના ગરમ તડકાથી બનેલી ટેસ્ટી ગુજરાતી કઢી.</p>
@@ -457,19 +461,18 @@
             </div>
 
             <!-- Item 18: Khichdi -->
-            <div class="menu-card fade-in-card" data-category="sides">
+            <div class="menu-card fade-in-card" id="menu-card-18" data-category="sides">
                 <div class="menu-card-img">
-                    <img src="items/18.khichdi.opt.webp" alt="Spicy Sev Lasan Curry">
+                    <img id="menu-card-img-18" src="items/18.Woodfired Khichdi.webp" alt="Woodfired Khichdi (ચૂલાની ખીચડી)">
                     <span class="menu-card-badge" id="badge-item-18">Unlimited</span>
                 </div>
                 <div class="menu-card-details">
-                    <span class="menu-card-num">#૧૮</span>
+                    <span class="menu-card-num" id="menu-card-num-18">#૧૮</span>
                     <h3 class="menu-card-title" id="title-item-18">ચૂલાની ખીચડી</h3>
                     <span class="menu-card-eng" id="eng-item-18">Woodfired Khichdi</span>
                     <p class="menu-card-desc" id="desc-item-18">દેશી ચૂલા પર બનાવેલી મગની દાળ અને ચોખાની નરમ અને પૌષ્ટિક ગરમાગરમ ઘી વાળી કાઠિયાવાડી ખીચડી.</p>
                 </div>
             </div>
-
         </div>
     </section>
 

@@ -45,7 +45,7 @@ const langData = {
         //
         "thali-badge": "અમારો ખાસ ધમાકો",
         "thali-title": "અનલિમિટેડ ગુજરાતી અને કાઠિયાવાડી થાળી",
-        "thali-currency": "₹",
+        "thali-currency": "₹૨૦૦",
         "thali-per-person": "/ વ્યક્તિ",
         "thali-desc": "અમારી અસલ કાઠિયાવાડી થાળીમાં ૧૮ થી પણ વધુ સ્વાદિષ્ટ વાનગીઓનો સમાવેશ થાય છે. ગરમ-ગરમ રોટલી, પૂરી, સેવ લસણ, કઢી-ખીચડી અને અસંખ્ય refills સાથે પેટ ભરીને તૃપ્તિનો અહેસાસ કરો.",
         "promo1-title": "ગ્રુપ બુકિંગ પર ૧૦% ડિસ્કાઉન્ટ",
@@ -162,7 +162,7 @@ const langData = {
         //
         "thali-badge": "Our Signature Special",
         "thali-title": "Unlimited Gujarati & Kathiyawadi Thali",
-        "thali-currency": "₹",
+        "thali-currency": "₹200",
         "thali-per-person": "/ guest",
         "thali-desc": "Indulge in a royal feast featuring over 18 traditional dishes. Enjoy unlimited refills of hot clay-oven rotli, puffed puris, signature sev lasan curry, cooling chaas, and sweet desserts.",
         "promo1-title": "10% Flat Group Discount",
@@ -200,9 +200,9 @@ const langData = {
         // Item details translation in English
         "titles": {
             "1": "Panipuri",
-            "2": "Hot Veg Soup",
+            "2": "Hot Vegetable Soup",
             "3": "Masala Buttermilk",
-            "4": "Fresh Garden Salad",
+            "4": "Fresh Green Salad",
             "5": "Crunchy Fryms",
             "6": "Gujarati Sweet",
             "7": "Namkeen Farsan",
@@ -216,7 +216,7 @@ const langData = {
             "15": "Dal Fry",
             "16": "Jeera Basmati Rice",
             "17": "Traditional Kadhi",
-            "18": "Woodfired Khichdi"
+            "18": "Woodfired Khichdi",
         },
         "descs": {
             "1": "Crispy hollow semolina spheres served with spiced potato chickpea filling and tangy mint-coriander water.",
@@ -352,59 +352,27 @@ function setLanguage(lang) {
     document.getElementById("footer-disc-text").innerHTML = langData[lang]["footer-disc"];
 
     // Update Menu Card lists
-    const menuCardsContainer = document.getElementById("menu-cards-container");
-
     for (let i = 1; i <= 18; i++) {
-        const menuCardDiv = document.createElement("div");
-        menuCardDiv.setAttribute("class", "menu-card fade-in-card");
+        const menuCardDiv = document.getElementById(`menu-card-${i}`);
         menuCardDiv.setAttribute("data-category", langData["category"][i]);
 
-        const menuCardImgDiv = document.createElement("div");
-        menuCardImgDiv.setAttribute("class", "menu-card-img");
-
-        const menuCardImage = new Image();
+        const menuCardImage = document.getElementById(`menu-card-img-${i}`);
         menuCardImage.setAttribute("src", `items/${i}.${langData["en"]["titles"][i]}.webp`);
-        menuCardImage.setAttribute("alt", langData[lang]["titles"][i]);
 
-        const menuCardBadgeSpan = document.createElement("span");
-        menuCardBadgeSpan.setAttribute("id", `badge-item-${i}`);
-        menuCardBadgeSpan.setAttribute("class", "menu-card-badge");
+        const menuCardBadgeSpan = document.getElementById(`badge-item-${i}`);
         menuCardBadgeSpan.textContent = i === 10 ? (lang === "gu" ? "મુખ્ય વાનગી" : "Signature") : (lang === "gu" ? "અનલિમિટેડ" : "Unlimited");
 
-        menuCardImgDiv.appendChild(menuCardImage);
-        menuCardImgDiv.appendChild(menuCardBadgeSpan);
+        const menuCardNumSpan = document.getElementById(`menu-card-num-${i}`);
+        if (lang === "en") menuCardNumSpan.textContent = `#${i}`;
 
-        const menuCardDetailsDiv = document.createElement("div");
-        menuCardDetailsDiv.setAttribute("class", "menu-card-details");
-
-        const menuCardNumSpan = document.createElement("span");
-        menuCardNumSpan.setAttribute("class", "menu-card-num");
-        menuCardNumSpan.textContent = `#${i}`;
-
-        const menuCardTitleH3 = document.createElement("h3");
-        menuCardTitleH3.setAttribute("id", `title-item-${i}`);
-        menuCardTitleH3.setAttribute("class", "menu-card-title");
+        const menuCardTitleH3 = document.getElementById(`title-item-${i}`);
         menuCardTitleH3.textContent = langData[lang]["titles"][i];
 
-        const menuCardSubTitleSpan = document.createElement("span");
-        menuCardSubTitleSpan.setAttribute("id", `eng-item-${i}`);
-        menuCardSubTitleSpan.setAttribute("class", "menu-card-eng");
-        menuCardSubTitleSpan.textContent = langData[lang][`filter-${langData["category"][i]}`]; // langData["en"]["titles"][i];
+        const menuCardSubTitleSpan = document.getElementById(`eng-item-${i}`);
+        menuCardSubTitleSpan.textContent = langData[lang][`filter-${langData["category"][i]}`];
 
-        const menuCardDescP = document.createElement("p");
-        menuCardDescP.setAttribute("id", `desc-item-${i}`);
-        menuCardDescP.setAttribute("class", "menu-card-desc");
+        const menuCardDescP = document.getElementById(`desc-item-${i}`);
         menuCardDescP.textContent = langData[lang]["descs"][i];
-
-        menuCardDetailsDiv.appendChild(menuCardNumSpan);
-        menuCardDetailsDiv.appendChild(menuCardTitleH3);
-        menuCardDetailsDiv.appendChild(menuCardSubTitleSpan);
-        menuCardDetailsDiv.appendChild(menuCardDescP);
-
-        menuCardDiv.appendChild(menuCardImgDiv);
-        menuCardDiv.appendChild(menuCardDetailsDiv);
-
-        menuCardsContainer.appendChild(menuCardDiv);
     }
 }
 
