@@ -1,6 +1,6 @@
 # ડાંકાવાલા કાઠિયાવાડી ગાર્ડન રેસ્ટોરન્ટ
 
-[![logo](assets/logo.webp)](https://mitulvaghamshi.github.io/Dankawala/ "Click to view the menu")
+[![logo](assets/logo.webp)](https://mitulvaghamshi.github.io/dankawala/ "Click to view the menu")
 
 ## મેનુ
 
