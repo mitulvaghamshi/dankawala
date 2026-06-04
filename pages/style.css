@@ -49,7 +49,7 @@ html.theme-light {
     --text-primary: var(--text-dark);
     --text-secondary: #4a3e2c;
     --shadow-color: rgba(184, 79, 29, 0.08);
-    --hero-overlay: rgba(0, 0, 0, 0.65);
+    --hero-overlay: rgba(0, 0, 0, 0.35);
 }
 
 html.theme-dark {
@@ -61,7 +61,7 @@ html.theme-dark {
     --text-primary: var(--text-light);
     --text-secondary: #d3c4b1;
     --shadow-color: rgba(0, 0, 0, 0.5);
-    --hero-overlay: rgba(0, 0, 0, 0.75);
+    --hero-overlay: rgba(0, 0, 0, 0.65);
 }
 
 body {
